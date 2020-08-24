@@ -1,0 +1,403 @@
+// css style
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+a:hover {
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+:root {
+    --primary: #7DF840;
+    --second: #5DCC26;
+    --third: #1B1F1A;
+    --white: #fff;
+    --black: #000;
+}
+
+
+
+.containers {
+    // max-width: 144rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+    
+}
+
+.relative {
+    position: relative;
+}
+
+.hide {
+    display: none!important;
+}
+.active {
+    display: block;
+    opacity: 1!important;
+}
+
+.btn {
+    outline: unset;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+@mixin dFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+@mixin dFlexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+
+
+
+// header top
+.header {
+    &__top {
+        min-height: 4.5rem;
+        background: var(--third);
+        @include dFlexCenter();
+        margin-bottom: 2rem;
+    }
+    &__rows {
+        padding: 1rem 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__cols {
+        @include dFlexCenter();
+        & img {
+            margin: 0.5rem;
+        }
+        & span, & a{
+            color: var(--white);
+            opacity: 0.5;
+            margin-left: 1rem;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            &.green {
+                color: var(--primary);
+                opacity: 1;
+                margin-left: 0.5rem;
+                padding-top: 0.5rem;
+            }
+            &:hover {
+                color: var(--second);
+            }
+        }
+        & .noti {
+            position: absolute;
+            content: '';
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--primary);
+            text-align: center;
+            opacity: 1;
+            line-height: 1.5rem;
+            border-radius: 50%;
+            top: 0.5rem;
+            right: -0.3rem;
+            font-size: 1.2rem;
+            color: var(--third);
+            font-weight: 500;
+        }
+    }
+    &__cols:nth-child(2) {
+        margin-right: auto;
+    }
+    
+    &__cols:first-child {
+        margin-right: 8rem;
+    }
+    &__cols:nth-child(3), &__cols:nth-child(5) {
+        margin-right: 5rem;
+    }
+
+}
+// header menu
+.menu {
+    width: 100%;
+    @include dFlex();
+    margin-bottom: 2rem;
+    position: relative;
+    &__logo {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        & img {
+            margin-right: 2rem;
+        }
+        & h2 {
+            font-weight: 900;
+            font-size: 2.8rem;
+            line-height: 3.3rem;
+            color: var(--third);
+        }
+        & p {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: var(--second);
+        }
+    }
+    &__nav {
+        margin-left: auto;
+        transition: ease 0.3s;
+    }
+    &__list {
+        @include dFlex();
+    }
+    &__item {
+        padding: 0.5rem 0;
+        & a {
+            font-size: 2rem;
+            line-height: 2.3rem;
+            color: var(--third);
+            &:hover {
+                color: var(--second);
+            }
+        }
+    }
+    &__item:not(:last-child) {
+        margin-right: 8rem;
+    }
+    &__item:last-child {
+        margin-right: 4rem;
+    }
+
+    &__collapse {
+        cursor: pointer;
+        position: absolute;
+        margin-left: auto;
+        right: 0;
+        top: 0;
+        z-index: 999;
+        display: none;
+    }
+  
+}
+
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--third);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
+
+// footer
+
+footer {
+    background: var(--third);
+}
+
+.footer {
+    min-height: 48rem;
+    @include dFlex();
+    align-items: flex-start;
+
+    padding-top: 4.5rem;
+    &__logo {
+        img {
+            margin-bottom: 1rem;
+        } 
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+
+        & h2 {
+            font-size: 2.8rem;
+            line-height: 3.3rem;
+            font-weight: 900;
+            color: var(--white);
+        }
+        & p {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: var(--second);
+        }
+    }
+    &__item {
+        h2 {
+            color: var(--white);
+            font-size: 2.5rem;
+            line-height: 2.9rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        a {
+            font-size: 1.6rem;
+            line-height: 4rem;
+            color: var(--white);
+            opacity: 0.5;
+        }
+    }
+    &__reg {
+        width: 100%;
+        height: 5.2rem;
+        position: relative;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8rem 1.4rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+        }
+
+        & input {
+            outline: none;
+            border: none;
+            color: var(--white);
+            opacity: 0.5;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            background: none;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    // header menu
+    .menu {
+        align-items: flex-start;
+    }
+    .menu__logo {
+        flex-direction: column;
+        align-items: center;
+        & img {
+            margin: 0;
+        }
+    }
+
+    // menu
+    .menu__collapse {
+        display: block;
+    }
+    .menu__nav {
+        opacity: 0;
+    }
+    .menu__nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--second);
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+    }
+    .menu__list {
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .menu__item:hover a {
+        color: var(--white);
+    }
+ }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    
+   
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+   // menu 
+   .menu {
+       flex-direction: column;
+   }
+   .menu__nav {
+       margin: 0;
+   }
+
+ }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    // header top
+    .header__top .header__rows {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    
+  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    
+  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }

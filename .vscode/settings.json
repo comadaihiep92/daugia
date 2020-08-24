@@ -1,0 +1,6 @@
+{
+    "compile-hero.pug-output-directory": "../../public",
+    "compile-hero.scss-output-directory": "../../public/css",
+    "compile-hero.generate-minified-html": true,
+    "compile-hero.javascript-output-toggle": false
+}
