@@ -18,10 +18,16 @@
           <div class="header__rows">
             <div class="header__cols"><img src="./images/icon-phone.png" alt="phone"/><span>+88 12345678</span></div>
             <div class="header__cols"><img src="./images/icon-email.png" alt="phone"/><span>youremail@gmail.com</span></div>
-            <div class="header__cols relative hide"><img src="./images/icon-noti.png" alt="phone"/><span class="noti">2</span></div>
-            <div class="header__cols hide"><img src="./images/icon-user.png" alt="phone"/><span>Hi, Buyer</span></div>
-            <div class="header__cols"><a class="green" href="./sigup.html">Register</a></div>
-            <div class="header__cols"><a class="green" href="./login.html">Login</a></div>
+            <div class="header__cols relative" id="editDropdown"><a class="header__link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:"><img src="./images/icon-noti.png" alt="phone"/><span class="noti">2</span></a>
+              <div class="dropdown-menu custon-dropdown"><span>Thông báo</span><a href="#">Xem tất cả thông báo</a></div>
+            </div>
+            <div class="header__cols" id="editLogin"><a class="header__link" aria-labelledby="dropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:"><img src="./images/icon-user.png" alt="phone"/><span>Hi, Buyer</span></a>
+              <div class="dropdown-menu custom-dropdown" aria-labelledby="dropdownProfile" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-105px, 40px, 0px);"><a class="dropdown-item" href="#"><img src="./images/icon-profile.png" alt=""/><span>Hồ sơ</span></a><a class="dropdown-item" href="#"><img src="./images/icon-noti-blue.png" alt=""/><span>Thông báo của tôi</span></a><a class="dropdown-item" href="#"><img src="./images/icon-report.png" alt=""/><span>Báo cáo một vấn đề</span></a><a class="dropdown-item" href="#"><img src="./images/icon-transition.png" alt=""/><span>Giao dịch của tôi</span></a><a class="dropdown-item" href="#"><img src="./images/icon-wallet.png" alt=""/><span>Ví của tôi</span></a><a class="dropdown-item" href="#"><img src="./images/icon-setting.png" alt=""/><span>Quản lý hồ sơ</span></a>
+                <div class="dropdown-divider custom-dropdown__divider"></div><a class="dropdown-item" href="#"><img src="./images/icon-logout.png" alt=""/><span> Đăng xuất</span></a>
+              </div>
+            </div>
+            <div class="header__cols hide"><a class="green" data-toggle="modal" data-target="#registerModal" href="javascript:">Register</a></div>
+            <div class="header__cols hide"><a class="green" data-toggle="modal" data-target="#loginModal" href="javascript;">Login</a></div>
           </div>
         </div>
       </div>
@@ -680,9 +686,121 @@
       </div>
     </footer>
   </body>
-  <script src="./js/jquery-3.5.1.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/owl.carousel.js"></script>
-  <script src="./js/owl.carousel.min.js"></script>
-  <script src="./js/custom.js"></script>
-</html>
+</html><!-- login modal -->
+<div class="custom-modal">
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal__dialog" role="document">
+      <div class="modal-content custom-modal__content">
+        <div class="modal-header custom-modal__header">
+          <h5 class="custom-modal__title" id="exampleModalLongTitle">Đăng nhập Bảng điều chỉnh</h5>
+          <button class="custom-modal__close close" type="button" data-dismiss="modal" aria-label="Close"><span class="custom-modal__icon-close" aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <form class="laraframe-form custom-login custom-modal__form cvalidate" action="#" method="post">
+                <div class="alert login-alert" id="loginAlert" role="alert" style="display: none;"></div>
+                <div class="custom-modal__row custom-modal__row--name">
+                  <input class="custom-modal__input" id="txt_uname" type="text" name="fake_255" placeholder="" value=""/>
+                  <label class="custom-modal__label" for="txt_uname">Username</label>
+                </div>
+                <div class="custom-modal__row custom-modal__row--pass">
+                  <input class="custom-modal__input" id="txt_pwd" type="password" name="fake_256" placeholder=""/>
+                  <label class="custom-modal__label" for="txt_pwd">Password</label>
+                </div>
+                <div class="form-row custom-modal__padding">
+                  <div class="checkbox col-6 custom-modal__checkbox">
+                    <input class="custom-modal__remember-input" id="rememberMe" type="checkbox" name="fake_260"/><span class="custom-modal__checkmark"></span>
+                    <label class="custom-modal__checkbox" for="rememberMe">Ghi nhớ</label>
+                  </div>
+                  <div class="col-6 text-right laraframe-form"><a class="custom-modal__forgot" href="#">Quên mật khẩu?</a></div>
+                </div>
+                <div class="form-group custom-modal__login">
+                  <button class="custom-modal__button" id="but_submit" type="submit">Đăng nhập</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer custom-modal__footer">
+          <div class="custom-modal__bottom">
+            <p class="custom-modal__text">Don not have an account?</p><a class="custom-modal__create" data-toggle="modal" data-dismiss="modal" aria-label="Close" data-target="#registerModal" href="javascript;">Tạo một cái</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- register modal -->
+<div class="custom-modal register-modal">
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal__dialog" role="document">
+      <div class="modal-content custom-modal__content">
+        <div class="modal-header custom-modal__header">
+          <h5 class="custom-modal__title" id="exampleModalLongTitle">Đăng ký</h5>
+          <button class="custom-modal__close close" type="button" data-dismiss="modal" aria-label="Close"><span class="custom-modal__icon-close" aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <form class="laraframe-form custom-login custom-modal__form cvalidate" action="#" method="post">
+                <input type="hidden" name="_token" value=""/>
+                <input type="hidden" value="fam" name="base_key"/>
+                <div class="alert login-alert" id="registerAlert" role="alert" style="display: none;"></div>
+                <div class="form-row">
+                  <div class="col-md-6">
+                    <div class="custom-modal__row custom-modal__row--name">
+                      <input class="custom-modal__input" id="first_name" type="text" name="fake_265" value="" placeholder="" data-cval-name="The first name field" data-cval-rules="required|escapeInput|alphaSpace"/>
+                      <label class="custom-modal__label" for="first_name">First Name</label><span class="invalid-feedback cval-error" data-cval-error="fake_265">The first name field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="first_name_alert" role="alert" style="display: none;"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="custom-modal__row custom-modal__row--name">
+                      <input class="custom-modal__input" id="last_name" type="text" name="fake_266" value="" placeholder="" data-cval-name="The last name field" data-cval-rules="required|escapeInput|alphaSpace"/>
+                      <label class="custom-modal__label" for="last_name">Last Name</label><span class="invalid-feedback cval-error" data-cval-error="fake_266">The last name field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="last_name_alert" role="alert" style="display: none;"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="custom-modal__row custom-modal__row--name">
+                  <input class="custom-modal__input" id="reg-username" type="text" name="fake_255" value="" placeholder="" data-cval-name="The username field" data-cval-rules="required|escapeInput|alphaDash"/>
+                  <label class="custom-modal__label" for="reg-username">Username</label><span class="invalid-feedback cval-error" data-cval-error="fake_255">The username field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="username_alert" role="alert" style="display: none;"></span>
+                </div>
+                <div class="custom-modal__row custom-modal__row--name">
+                  <input class="custom-modal__input" id="reg-email" type="text" name="fake_249" value="" placeholder="" data-cval-name="The email field" data-cval-rules="required|escapeInput|email"/>
+                  <label class="custom-modal__label" for="reg-email">Email</label><span class="invalid-feedback cval-error" data-cval-error="fake_249">The email field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="email_alert" role="alert" style="display: none;"></span>
+                </div>
+                <div class="custom-modal__row custom-modal__row--name">
+                  <input class="custom-modal__input" id="reg-password" type="password" name="fake_256" placeholder="" data-cval-name="The password field" data-cval-rules="required|followedBy:password_confirmation"/>
+                  <label class="custom-modal__label" for="reg-password">Password</label><span class="invalid-feedback cval-error" data-cval-error="fake_256">The password field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="password_alert" role="alert" style="display: none;"></span>
+                </div>
+                <div class="custom-modal__row custom-modal__row--pass">
+                  <input class="custom-modal__input" id="reg-password_confirmation" type="password" name="password_confirmation" placeholder="" data-cval-name="The confirm password field" data-cval-rules="required|follow:fake_256"/>
+                  <label class="custom-modal__label" for="reg-password_confirmation">Confirm Password</label><span class="invalid-feedback cval-error" data-cval-error="password_confirmation">The confirm password field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="password_confirmation_alert" role="alert" style="display: none;"></span>
+                </div>
+                <div class="form-row custom-modal__padding">
+                  <div class="checkbox pl-0 custom-modal__checkbox">
+                    <input class="custom-modal__remember-input" id="agreement" type="checkbox" name="check_agreement" data-cval-name="The accept our terms and conditions field" data-cval-rules="required"/><span class="custom-modal__checkmark"></span>
+                    <label class="custom-modal__checkbox" for="agreement">Chấp nhận các điều khoản và điều kiện của chúng tôi.</label><span class="invalid-feedback cval-error" data-cval-error="check_agreement"></span>
+                  </div>
+                </div>
+                <div class="form-group custom-modal__login">
+                  <button class="custom-modal__button" id="reg_submit" type="submit" disabled="disabled">Đăng ký</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer custom-modal__footer">
+          <div class="custom-modal__bottom">
+            <p class="custom-modal__text">Bạn co săn sàng để tạo một tai khoản?</p><a class="custom-modal__create" data-toggle="modal" data-dismiss="modal" aria-label="Close" data-target="#loginModal" href="javascript;">Đăng nhập</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/custom.js"></script>
+  </div>
+</div>

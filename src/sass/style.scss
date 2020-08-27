@@ -102,6 +102,7 @@ body {
 
     &__cols {
         @include dFlexCenter();
+        cursor: pointer;
 
         & img {
             margin: 0.5rem;
@@ -156,6 +157,10 @@ body {
     &__cols:nth-child(3),
     &__cols:nth-child(5) {
         margin-right: 5rem;
+    }
+
+    &__link {
+        opacity: 1 !important;
     }
 
 }
@@ -836,7 +841,361 @@ footer {
 }
 
 
+// modal custon
 
+.custom-modal {
+    &__dialog {
+        max-width: 66rem;
+    }
+
+    &__header {
+        height: 10rem;
+        background: var(--third);
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        width: 100%;
+        font-size: 3.4rem;
+        line-height: 4rem;
+        color: var(--primary);
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__icon-close {
+        width: 2.6rem;
+        background: url(../images/icon-close.png);
+        height: 2.6rem;
+        display: block;
+    }
+
+    &__row {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        &--name {
+            margin-bottom: 4rem;
+        }
+
+        &--pass {
+            margin-bottom: 2.8rem;
+        }
+    }
+
+
+    &__label {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        color: var(--third);
+        opacity: 0.4;
+        padding: 0 1rem;
+        position: absolute;
+        top: 0.65rem;
+        left: 0;
+        transition: .2s ease-out;
+        cursor: text;
+        margin: 0;
+
+    }
+
+    &__input {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        color: var(--third);
+        opacity: 0.4;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 0.7rem 1rem;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 2.8rem;
+
+
+        & label {
+            margin: 0;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+            font-weight: 500;
+            color: var(--third);
+            padding-left: 4rem;
+        }
+    }
+
+    &__forgot {
+        margin: 0;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        font-weight: 300;
+        color: var(--third);
+        opacity: 0.5;
+    }
+
+    &__padding {
+        padding: 0 1rem;
+        margin-bottom: 4.5rem;
+    }
+
+    &__button {
+        font-size: 2.8rem;
+        font-weight: 500;
+        text-transform: none;
+        color: var(--primary);
+        display: block;
+        background: var(--third);
+        margin: 0 4rem;
+        width: 32rem;
+        height: 8rem;
+        line-height: 3.3rem;
+        text-align: center;
+        position: relative;
+        outline: unset;
+        border: none;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            content: "";
+            right: 100%;
+            top: 0;
+            border-top: 4rem solid transparent;
+            border-right: 4rem solid var(--third);
+            border-bottom: 4rem solid transparent;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 100%;
+            top: 0;
+            border-top: 4rem solid transparent;
+            border-left: 4rem solid var(--third);
+            border-bottom: 4rem solid transparent;
+        }
+    }
+
+    &__login {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    &__footer {
+        border: none;
+    }
+
+    &__bottom {
+        text-align: center;
+        width: 100%;
+        margin: 3.6rem 0 2.6rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        text-align: center;
+        font-weight: 300;
+        color: var(--third);
+        opacity: 0.5;
+    }
+
+    &__create {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        text-align: center;
+        font-weight: 500;
+        color: var(--third);
+        opacity: 0.5;
+    }
+}
+
+.close:not(:disabled):not(.disabled):hover,
+.close:not(:disabled):not(.disabled):focus {
+    opacity: 1;
+}
+
+/* The container */
+.custom-modal__checkbox {}
+
+/* Hide the browser's default checkbox */
+.custom-modal__checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.custom-modal__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.8rem;
+    width: 2.8rem;
+    border: 1px solid #C4C4C4;
+    border-radius: 0.3rem;
+}
+
+/* On mouse-over, add a grey background color */
+.custom-modal__checkbox:hover input~.custom-modal__checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-modal__checkbox input:checked~.custom-modal__checkmark {
+    background-color: #000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.custom-modal__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-modal__checkbox input:checked~.custom-modal__checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-modal__checkbox .custom-modal__checkmark:after {
+    left: 0;
+    top: 0;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: url(../images/icon-checkbox.png);
+}
+
+// style input
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-bottom: 1px solid var(--primary);
+}
+
+input[type="text"]:focus:not([readonly])+label,
+input[type="password"]:focus:not([readonly])+label {
+    transform: translateY(-90%);
+    font-size: 1.2rem;
+    opacity: 1;
+}
+
+
+// dropdown menu right
+
+#editDropdown {
+    .dropdown-menu.show {
+        display: flex;
+    }
+
+    .custon-dropdown {
+        width: 28rem;
+        right: 0 !important;
+        left: unset !important;
+        transform: translate3d(10px, 30px, 0px) !important;
+        border-radius: 0.5rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: 1px solid #e0e0e0;
+        background: var(--white);
+        min-height: 7.8rem;
+
+        flex-direction: column;
+
+
+        & span {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: rgba(27, 31, 26, 0.5);
+            font-weight: bold;
+            opacity: 1;
+            padding: 1.1rem 0 1.4rem 1.6rem;
+            border-bottom: 1px solid rgba(27, 31, 26, 0.1);
+            margin: 0;
+        }
+
+        & a {
+            color: rgba(27, 31, 26, 0.5);
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            opacity: 1;
+            padding: 1rem 0 1.4rem 0;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+
+            &:hover {
+                color: var(--black);
+                background: var(--primary);
+            }
+        }
+    }
+}
+
+#editLogin {
+    .custom-dropdown {
+        right: 0 !important;
+        left: unset !important;
+        transform: translate3d(-10px, 42px, 0px) !important;
+
+        width: 20rem;
+        background: #FFFFFF;
+        border: 1px solid #E0E0E0;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        padding: 0.3rem 2.4rem;
+
+        & a {
+            width: 100%;
+            color: rgba(27, 31, 26, 1);
+            font-size: 1.2rem;
+            line-height: 3.5rem;
+            margin: 0;
+            padding: 0;
+            opacity: 1 !important;
+
+            &:hover {
+                background: unset !important;
+            }
+
+            &:hover span {
+                color: var(--second) !important;
+                opacity: 1 !important;
+            }
+        }
+
+        & span {
+            color: rgba(27, 31, 26, 1);
+            font-size: 1.2rem;
+            line-height: 3.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        & img {
+            margin-right: 1.8rem;
+        }
+
+        &__divider {
+            margin-left: -3.2rem;
+            margin-right: -2.4rem;
+        }
+    }
+
+}
 
 
 
@@ -1047,6 +1406,32 @@ footer {
     .content__title,
     .content__now {
         margin-bottom: 2rem;
+    }
+
+    .content__now {
+        height: 6rem;
+    }
+
+    .content__now h2 {
+        line-height: 6rem;
+    }
+
+    .content__now h2::before {
+
+        border-top: 3rem solid transparent;
+        border-right: 3rem solid var(--third);
+        border-bottom: 3rem solid transparent;
+    }
+
+    .content__now h2::after {
+
+        border-top: 3rem solid transparent;
+        border-left: 3rem solid var(--third);
+        border-bottom: 3rem solid transparent;
+    }
+
+    .content__title {
+        flex-direction: column;
     }
 
     .content__title h2 {
