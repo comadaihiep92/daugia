@@ -92,19 +92,131 @@ html(lang="en")
                                 li.menu__item
                                     a(href="#") Hỗ trợ
                         .menu__search
-                            //- button.btn.btn--search
-                            //-     img(src="./images/icon-search.png", alt="search")
-                            form(action='/auctions/search', method='get')
-                                input(type='hidden', name='_token', value='')
-                                #search
-                                    input#input(name='p_srch', placeholder='Search...', value='')
-                                    button.btn.btn--search#button(type='submit')
-                                        img(src="./images/icon-search.png", alt="search")
+                            a.btn.btn--search(aria-labelledby='dropdownSearch', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', href='javascript:')
+                                img(src="./images/icon-search.png", alt="search")
+                            .dropdown-menu.custom-search(aria-labelledby='dropdownSearch', x-placement='bottom-end', style='position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-105px, 40px, 0px);')
+                                form(action='/auctions/search', method='get')
+                                    input(type='hidden', name='_token', value='')
+                                    #search
+                                        input#input(name='p_srch', placeholder='Search...', value='')
+                                        button.btn.btn--search#button(type='submit')
+                                            img(src="./images/icon-search.png", alt="search")
 
             
 
         main.main
             .containers
+                .pagi
+                    ul
+                        li
+                            a Trang chủ
+                        li / Auction /
+                        li Search
+                .row
+                    .col-12
+                        .card.card-outline.custom-card.mb-4.card-info
+                            .card-header
+                                .row
+                                    form.cm-filter-form.form-inline(action='http://classictetriz.com/auctions/search', method='get')
+                                        .col-lg-3
+                                            .form-group.clearfix
+                                                .no-select
+                                                    select.form-control.cm-filter-sort-by(name='p_sort')
+                                                        option(value='') Sắp xếp theo
+                                                        option(value='0') Loại đấu giá
+                                                        option(value='1') Tình trạng đấu giá
+                                                        option(value='2') Giá khởi điểm
+                                                        option(value='3') Thể loại
+                                                        option(value='4') Tiền tệ
+                                                .no-select
+                                                    select.form-control.cm-filter-order-by(name='p_ord')
+                                                        option(value='d') Miêu tả
+                                                        option(value='a') Tăng dần
+                                                button.btn.btn-info(type='submit')
+                                                    i.fa.fa-arrow-right
+                                        .col-lg-3
+                                            .form-group.clearfix
+                                                input.form-control.cm-filter-from-date.datepicker(type='text', name='p_frm', placeholder='From date', value='')
+                                                input.form-control.cm-filter-to-date.datepicker(type='text', name='p_to', placeholder='To date', value='')
+                                                button.btn.btn-info(type='submit')
+                                                    i.fa.fa-arrow-right
+                                        .col-lg-6
+                                            .d-flex.cm-filter-search-group(style='margin-right: 36px;')
+                                                .no-select.flex-3
+                                                    select.form-control(name='p_ssf')
+                                                        option(value='') Tất cả các lĩnh vực
+                                                        option(value='0') Tiêu đề đấu giá
+                                                        option(value='1') Thể loại
+                                                        option(value='2') Miêu tả
+                                                .no-select.flex-3
+                                                    select.form-control.cm-filter-comparison-operator.select-compact(name='p_comp')
+                                                        option(value='lk') Để tương tự
+                                                        option(value='e') chính xác để
+                                                        option(value='l') Nhỏ hơn
+                                                        option(value='le') Ít hơn hoặc tương đương
+                                                        option(value='m') To hơn
+                                                        option(value='me') Lớn hơn hay bằng với
+                                                        option(value='ne') Không công bằng
+                                                .flex-5.mr-1-percent
+                                                    input.form-control.cm-filter-search.mr-0(type='text', name='p_srch', placeholder='search', value='')
+                                                button.btn.btn-info(type='submit')
+                                                    i.fa.fa-search
+                                                a.cm-filter-toggler.btn.btn-danger(href='javascript:;')
+                                                    i.fa.fa-filter
+                                div
+                                form.cm-filter-container(action='http://classictetriz.com/auctions/search', method='get', style='')
+                                    .cm-filter-wrapper.row
+                                        .my-3.col-md-3
+                                            h6 Loại đấu giá
+                                            div
+                                                input#p_fltr-0-1.cm-filter-checkbox(name='p_fltr[0][]', type='checkbox', value='1')
+                                                label.cm-filter-checkbox-label(for='p_fltr-0-1') Highest Bid
+                                            div
+                                                input#p_fltr-0-2.cm-filter-checkbox(name='p_fltr[0][]', type='checkbox', value='2')
+                                                label.cm-filter-checkbox-label(for='p_fltr-0-2') Blind Bid
+                                            div
+                                                input#p_fltr-0-3.cm-filter-checkbox(name='p_fltr[0][]', type='checkbox', value='3')
+                                                label.cm-filter-checkbox-label(for='p_fltr-0-3') Unique Bid
+                                            div
+                                                input#p_fltr-0-4.cm-filter-checkbox(name='p_fltr[0][]', type='checkbox', value='4')
+                                                label.cm-filter-checkbox-label(for='p_fltr-0-4') Vickrey Auction
+                                        .my-3.col-md-3
+                                            h6 Tình trạng đấu giá
+                                            div
+                                                input#p_fltr-1-1.cm-filter-checkbox(name='p_fltr[1][]', type='checkbox', value='1')
+                                                label.cm-filter-checkbox-label(for='p_fltr-1-1') Running
+                                            div
+                                                input#p_fltr-1-2.cm-filter-checkbox(name='p_fltr[1][]', type='checkbox', value='2')
+                                                label.cm-filter-checkbox-label(for='p_fltr-1-2') Completed
+                                        .my-3.col-md-3
+                                            h6 Tình trạng đấu giá
+                                            div
+                                                input#p_fltr-2-1.cm-filter-checkbox(name='p_fltr[2][]', type='checkbox', value='1')
+                                                label.cm-filter-checkbox-label(for='p_fltr-2-1') Running
+                                            div
+                                                input#p_fltr-2-2.cm-filter-checkbox(name='p_fltr[2][]', type='checkbox', value='2')
+                                                label.cm-filter-checkbox-label(for='p_fltr-2-2') Completed
+                                    button.btn.btn-info(type='submit')
+                                        i.fa.fa-filter
+                                        |  Filter
+                            .card-body
+                        .row
+                        .card.card-outline.custom-card.card-info
+                            .card-body
+                            .card-footer
+                                .row
+                                    .col-sm-6
+                                    .col-sm-6.cm-pagination-text
+                                        span
+                                            | cho thấy  
+                                            span 0
+                                            |  của 
+                                            span 0
+                                            |  data
+
+
+
+
                 
                    
         footer

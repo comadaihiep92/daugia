@@ -53,21 +53,156 @@
                 <li class="menu__item"><a href="#">Hỗ trợ</a></li>
               </ul>
             </div>
-            <div class="menu__search">
-              <form action="/auctions/search" method="get">
-                <input type="hidden" name="_token" value=""/>
-                <div id="search">
-                  <input id="input" name="p_srch" placeholder="Search..." value=""/>
-                  <button class="btn btn--search" id="button" type="submit"><img src="./images/icon-search.png" alt="search"/></button>
-                </div>
-              </form>
+            <div class="menu__search"><a class="btn btn--search" aria-labelledby="dropdownSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:"><img src="./images/icon-search.png" alt="search"/></a>
+              <div class="dropdown-menu custom-search" aria-labelledby="dropdownSearch" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-105px, 40px, 0px);">
+                <form action="/auctions/search" method="get">
+                  <input type="hidden" name="_token" value=""/>
+                  <div id="search">
+                    <input id="input" name="p_srch" placeholder="Search..." value=""/>
+                    <button class="btn btn--search" id="button" type="submit"><img src="./images/icon-search.png" alt="search"/></button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
     <main class="main">
-      <div class="containers"></div>
+      <div class="containers">
+        <div class="pagi">
+          <ul>
+            <li><a>Trang chủ</a></li>
+            <li>/ Auction /</li>
+            <li>Search</li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-outline custom-card mb-4 card-info">
+              <div class="card-header">
+                <div class="row">
+                  <form class="cm-filter-form form-inline" action="http://classictetriz.com/auctions/search" method="get">
+                    <div class="col-lg-3">
+                      <div class="form-group clearfix">
+                        <div class="no-select">
+                          <select class="form-control cm-filter-sort-by" name="p_sort">
+                            <option value="">Sắp xếp theo</option>
+                            <option value="0">Loại đấu giá</option>
+                            <option value="1">Tình trạng đấu giá</option>
+                            <option value="2">Giá khởi điểm</option>
+                            <option value="3">Thể loại</option>
+                            <option value="4">Tiền tệ</option>
+                          </select>
+                        </div>
+                        <div class="no-select">
+                          <select class="form-control cm-filter-order-by" name="p_ord">
+                            <option value="d">Miêu tả</option>
+                            <option value="a">Tăng dần</option>
+                          </select>
+                        </div>
+                        <button class="btn btn-info" type="submit"><i class="fa fa-arrow-right"></i></button>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group clearfix">
+                        <input class="form-control cm-filter-from-date datepicker" type="text" name="p_frm" placeholder="From date" value=""/>
+                        <input class="form-control cm-filter-to-date datepicker" type="text" name="p_to" placeholder="To date" value=""/>
+                        <button class="btn btn-info" type="submit"><i class="fa fa-arrow-right"></i></button>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="d-flex cm-filter-search-group" style="margin-right: 36px;">
+                        <div class="no-select flex-3">
+                          <select class="form-control" name="p_ssf">
+                            <option value="">Tất cả các lĩnh vực</option>
+                            <option value="0">Tiêu đề đấu giá</option>
+                            <option value="1">Thể loại</option>
+                            <option value="2">Miêu tả</option>
+                          </select>
+                        </div>
+                        <div class="no-select flex-3">
+                          <select class="form-control cm-filter-comparison-operator select-compact" name="p_comp">
+                            <option value="lk">Để tương tự</option>
+                            <option value="e">chính xác để</option>
+                            <option value="l">Nhỏ hơn</option>
+                            <option value="le">Ít hơn hoặc tương đương</option>
+                            <option value="m">To hơn</option>
+                            <option value="me">Lớn hơn hay bằng với</option>
+                            <option value="ne">Không công bằng</option>
+                          </select>
+                        </div>
+                        <div class="flex-5 mr-1-percent">
+                          <input class="form-control cm-filter-search mr-0" type="text" name="p_srch" placeholder="search" value=""/>
+                        </div>
+                        <button class="btn btn-info" type="submit"><i class="fa fa-search"></i></button><a class="cm-filter-toggler btn btn-danger" href="javascript:;"><i class="fa fa-filter"></i></a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div></div>
+                <form class="cm-filter-container" action="http://classictetriz.com/auctions/search" method="get">
+                  <div class="cm-filter-wrapper row">
+                    <div class="my-3 col-md-3">
+                      <h6>Loại đấu giá</h6>
+                      <div>
+                        <input class="cm-filter-checkbox" id="p_fltr-0-1" name="p_fltr[0][]" type="checkbox" value="1"/>
+                        <label class="cm-filter-checkbox-label" for="p_fltr-0-1">Highest Bid</label>
+                      </div>
+                      <div>
+                        <input class="cm-filter-checkbox" id="p_fltr-0-2" name="p_fltr[0][]" type="checkbox" value="2"/>
+                        <label class="cm-filter-checkbox-label" for="p_fltr-0-2">Blind Bid</label>
+                      </div>
+                      <div>
+                        <input class="cm-filter-checkbox" id="p_fltr-0-3" name="p_fltr[0][]" type="checkbox" value="3"/>
+                        <label class="cm-filter-checkbox-label" for="p_fltr-0-3">Unique Bid</label>
+                      </div>
+                      <div>
+                        <input class="cm-filter-checkbox" id="p_fltr-0-4" name="p_fltr[0][]" type="checkbox" value="4"/>
+                        <label class="cm-filter-checkbox-label" for="p_fltr-0-4">Vickrey Auction</label>
+                      </div>
+                    </div>
+                    <div class="my-3 col-md-3">
+                      <h6>Tình trạng đấu giá</h6>
+                      <div>
+                        <input class="cm-filter-checkbox" id="p_fltr-1-1" name="p_fltr[1][]" type="checkbox" value="1"/>
+                        <label class="cm-filter-checkbox-label" for="p_fltr-1-1">Running</label>
+                      </div>
+                      <div>
+                        <input class="cm-filter-checkbox" id="p_fltr-1-2" name="p_fltr[1][]" type="checkbox" value="2"/>
+                        <label class="cm-filter-checkbox-label" for="p_fltr-1-2">Completed</label>
+                      </div>
+                    </div>
+                    <div class="my-3 col-md-3">
+                      <h6>Tình trạng đấu giá</h6>
+                      <div>
+                        <input class="cm-filter-checkbox" id="p_fltr-2-1" name="p_fltr[2][]" type="checkbox" value="1"/>
+                        <label class="cm-filter-checkbox-label" for="p_fltr-2-1">Running</label>
+                      </div>
+                      <div>
+                        <input class="cm-filter-checkbox" id="p_fltr-2-2" name="p_fltr[2][]" type="checkbox" value="2"/>
+                        <label class="cm-filter-checkbox-label" for="p_fltr-2-2">Completed</label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-info" type="submit"><i class="fa fa-filter"></i> Filter</button>
+                </form>
+              </div>
+              <div class="card-body"></div>
+            </div>
+            <div class="row"></div>
+            <div class="card card-outline custom-card card-info">
+              <div class="card-body"></div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-sm-6"></div>
+                  <div class="col-sm-6 cm-pagination-text"><span>cho thấy  <span>0</span> của <span>0</span> data</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="containers">
