@@ -879,6 +879,24 @@ body {
   color: var(--second);
   font-weight: 500;
 }
+.custom-card__time {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  font-weight: 500;
+}
+.custom-card__actionStatus {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+}
+.custom-card__read {
+  color: var(--black);
+  opacity: 0.5;
+  font-weight: normal;
+}
+.custom-card__unread {
+  font-weight: normal;
+  color: var(--second);
+}
 .custom-card .table {
   width: 100%;
   background: #f4f4f4;
@@ -925,6 +943,89 @@ body {
 .custom-card .pagination-sm .page-item:last-child .page-link {
   background: #BBBCBA;
   border-radius: 5px;
+}
+.custom-card__refID {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  font-weight: 500;
+}
+.custom-card__money {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  font-weight: 500;
+  color: var(--second);
+}
+.custom-card__depositStatus div {
+  padding: 1.2rem;
+  background-color: var(--third);
+  border-radius: 5px;
+  width: fit-content;
+  margin: 0 auto;
+  min-width: 10.5rem;
+}
+.custom-card__depositStatus div p {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: var(--second);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.custom-card__cost {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  font-weight: 500;
+}
+
+.card-infor {
+  margin: 3.5rem 0 10rem auto;
+  min-width: 45rem;
+}
+.card-infor__line {
+  display: flex;
+  height: 8rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(27, 31, 26, 0.5);
+}
+.card-infor__line p {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  text-align: right;
+}
+.card-infor__line p:first-child {
+  width: 62%;
+}
+.card-infor__line:first-child {
+  font-weight: 500;
+}
+.card-infor__line:last-child {
+  font-weight: 500;
+  color: var(--second);
+}
+
+.option-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.option-container__item {
+  width: calc(100% / 3 - 3.8rem);
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  color: rgba(27, 31, 26, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+  background-color: rgba(27, 31, 26, 0.1);
+  margin: 0 0 2.4rem 0;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.option-container__item--active {
+  color: var(--second);
+  background-color: var(--third);
 }
 
 .text-custom {
