@@ -1447,6 +1447,9 @@ input[type=password]:focus:not([readonly]) + label {
     align-items: center;
     justify-content: center;
   }
+  .box--big {
+    flex-direction: column;
+  }
 
   .content__item {
     height: auto;
@@ -1569,5 +1572,15 @@ input[type=password]:focus:not([readonly]) + label {
 
   .content__bg--bds {
     height: 18.4rem !important;
+  }
+
+  .contact__column {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .custom-modal__button {
+    font-size: 2.2rem;
+    width: 20rem;
   }
 }

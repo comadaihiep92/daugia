@@ -1727,6 +1727,10 @@ input[type="password"]:focus:not([readonly])+label {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+
+        &--big {
+            flex-direction: column;
+        }
     }
 
     .content__item {
@@ -1864,6 +1868,17 @@ input[type="password"]:focus:not([readonly])+label {
     // bds
     .content__bg--bds {
         height: 18.4rem !important;
+    }
+
+    // contact 
+    .contact__column {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .custom-modal__button {
+        font-size: 2.2rem;
+        width: 20rem;
     }
 }
 
