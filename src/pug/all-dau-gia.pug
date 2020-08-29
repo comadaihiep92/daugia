@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+html(lang="en")
+    include head/head.pug
+        
+    body
+        include header/header.pug
+        main.main
+            .containers
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb.bg-white.mt-3.d-flex.align-items-center
+                        li.breadcrumb-item
+                            a.text-info(href='/public/index.html').d-flex.align-items-center
+                                img(src="./images/icon-home.png", alt="").mr-3
+                                span.text-custom Trang Chủ
+                        li.breadcrumb-item.text-custom
+                            | Auction
+                        li.breadcrumb-item.active.text-custom(aria-current='page') Search
+
+                .row
+                    .col
+                        .card.card-outline.custom-card.mb-4.card-info
+                            include filter/head.pug
+                            .card-body.p-0
+                                .content__list.content__list--big
+                                    .content__item.content__item--big
+                                        .content__box.box
+                                            .box__top
+                                                .box__image
+                                                    img(src="./images/dang-dau-gia/dang-dau-gia-1.png", alt="")
+                                                    //- button.btn.btn--dau-gia
+                                                    //-     img(src="./images/icon-dau-gia.png", alt="")
+                                                    span Vickrey auction
+                                            .box__mid
+                                                h2 Tên tài sản SDHFHFHHR
+                                                p Nigel Gottlied
+                                            .box__bottom.box__bottom--big
+                                                //- h3.box__title Tên tài sản
+                                                //- p.box__sub Giá khởi điểm:
+                                                //- p.box__price 24.000.000.000 VND
+                                                //- p.box__time Thời gian: 28/07/2020
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left end in:
+                                                    
+                                                        span.box__left.box__left--green
+                                                            | 11
+                                                            span.text-lowercase.box__left--gray.font-weight-light d
+                                                            | 2
+                                                            span.text-lowercase.box__left--gray.font-weight-light h
+                                                            | 1
+                                                            span.text-lowercase.box__left--gray.font-weight-light m
+                                                            | 10
+                                                            span.text-lowercase.box__left--gray.font-weight-light s
+                                                        
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Bắt đầu tại:
+                                                    
+                                                        p.box__left.box__left--green 70 USD
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Đang chuyển hàng:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Free
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Nhiều phiên đấu thầu:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Yes
+                                                    
+                                        .content__bg.content__bg--big
+                                    .content__item.content__item--big
+                                        .content__box.box
+                                            .box__top
+                                                .box__image
+                                                    img(src="./images/dang-dau-gia/dang-dau-gia-1.png", alt="")
+                                                    //- button.btn.btn--dau-gia
+                                                    //-     img(src="./images/icon-dau-gia.png", alt="")
+                                                    span Vickrey auction
+                                            .box__mid
+                                                h2 Tên tài sản SDHFHFHHR
+                                                p Nigel Gottlied
+                                            .box__bottom.box__bottom--big
+                                                //- h3.box__title Tên tài sản
+                                                //- p.box__sub Giá khởi điểm:
+                                                //- p.box__price 24.000.000.000 VND
+                                                //- p.box__time Thời gian: 28/07/2020
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left end in:
+                                                    
+                                                        span.box__left.box__left--green
+                                                            | 11
+                                                            span.text-lowercase.box__left--gray.font-weight-light d
+                                                            | 2
+                                                            span.text-lowercase.box__left--gray.font-weight-light h
+                                                            | 1
+                                                            span.text-lowercase.box__left--gray.font-weight-light m
+                                                            | 10
+                                                            span.text-lowercase.box__left--gray.font-weight-light s
+                                                        
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Bắt đầu tại:
+                                                    
+                                                        p.box__left.box__left--green 70 USD
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Đang chuyển hàng:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Free
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Nhiều phiên đấu thầu:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Yes
+                                                    
+                                        .content__bg.content__bg--big
+                                    .content__item.content__item--big
+                                        .content__box.box
+                                            .box__top
+                                                .box__image
+                                                    img(src="./images/dang-dau-gia/dang-dau-gia-1.png", alt="")
+                                                    //- button.btn.btn--dau-gia
+                                                    //-     img(src="./images/icon-dau-gia.png", alt="")
+                                                    span Vickrey auction
+                                            .box__mid
+                                                h2 Tên tài sản SDHFHFHHR
+                                                p Nigel Gottlied
+                                            .box__bottom.box__bottom--big
+                                                //- h3.box__title Tên tài sản
+                                                //- p.box__sub Giá khởi điểm:
+                                                //- p.box__price 24.000.000.000 VND
+                                                //- p.box__time Thời gian: 28/07/2020
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left end in:
+                                                    
+                                                        span.box__left.box__left--green
+                                                            | 11
+                                                            span.text-lowercase.box__left--gray.font-weight-light d
+                                                            | 2
+                                                            span.text-lowercase.box__left--gray.font-weight-light h
+                                                            | 1
+                                                            span.text-lowercase.box__left--gray.font-weight-light m
+                                                            | 10
+                                                            span.text-lowercase.box__left--gray.font-weight-light s
+                                                        
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Bắt đầu tại:
+                                                    
+                                                        p.box__left.box__left--green 70 USD
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Đang chuyển hàng:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Free
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Nhiều phiên đấu thầu:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Yes
+                                                    
+                                        .content__bg.content__bg--big
+                                    .content__item.content__item--big
+                                        .content__box.box
+                                            .box__top
+                                                .box__image
+                                                    img(src="./images/dang-dau-gia/dang-dau-gia-1.png", alt="")
+                                                    //- button.btn.btn--dau-gia
+                                                    //-     img(src="./images/icon-dau-gia.png", alt="")
+                                                    span Vickrey auction
+                                            .box__mid
+                                                h2 Tên tài sản SDHFHFHHR
+                                                p Nigel Gottlied
+                                            .box__bottom.box__bottom--big
+                                                //- h3.box__title Tên tài sản
+                                                //- p.box__sub Giá khởi điểm:
+                                                //- p.box__price 24.000.000.000 VND
+                                                //- p.box__time Thời gian: 28/07/2020
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left end in:
+                                                    
+                                                        span.box__left.box__left--green
+                                                            | 11
+                                                            span.text-lowercase.box__left--gray.font-weight-light d
+                                                            | 2
+                                                            span.text-lowercase.box__left--gray.font-weight-light h
+                                                            | 1
+                                                            span.text-lowercase.box__left--gray.font-weight-light m
+                                                            | 10
+                                                            span.text-lowercase.box__left--gray.font-weight-light s
+                                                        
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Bắt đầu tại:
+                                                    
+                                                        p.box__left.box__left--green 70 USD
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Đang chuyển hàng:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Free
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Nhiều phiên đấu thầu:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Yes
+                                                    
+                                        .content__bg.content__bg--big
+                                
+                                    .content__item.content__item--big
+                                        .content__box.box
+                                            .box__top
+                                                .box__image
+                                                    img(src="./images/dang-dau-gia/dang-dau-gia-1.png", alt="")
+                                                    //- button.btn.btn--dau-gia
+                                                    //-     img(src="./images/icon-dau-gia.png", alt="")
+                                                    span Vickrey auction
+                                            .box__mid
+                                                h2 Tên tài sản SDHFHFHHR
+                                                p Nigel Gottlied
+                                            .box__bottom.box__bottom--big
+                                                //- h3.box__title Tên tài sản
+                                                //- p.box__sub Giá khởi điểm:
+                                                //- p.box__price 24.000.000.000 VND
+                                                //- p.box__time Thời gian: 28/07/2020
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left end in:
+                                                    
+                                                        span.box__left.box__left--green
+                                                            | 11
+                                                            span.text-lowercase.box__left--gray.font-weight-light d
+                                                            | 2
+                                                            span.text-lowercase.box__left--gray.font-weight-light h
+                                                            | 1
+                                                            span.text-lowercase.box__left--gray.font-weight-light m
+                                                            | 10
+                                                            span.text-lowercase.box__left--gray.font-weight-light s
+                                                        
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Bắt đầu tại:
+                                                    
+                                                        p.box__left.box__left--green 70 USD
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Đang chuyển hàng:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Free
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Nhiều phiên đấu thầu:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Yes
+                                                    
+                                        .content__bg.content__bg--big
+                                    .content__item.content__item--big
+                                        .content__box.box
+                                            .box__top
+                                                .box__image
+                                                    img(src="./images/dang-dau-gia/dang-dau-gia-1.png", alt="")
+                                                    //- button.btn.btn--dau-gia
+                                                    //-     img(src="./images/icon-dau-gia.png", alt="")
+                                                    span Vickrey auction
+                                            .box__mid
+                                                h2 Tên tài sản SDHFHFHHR
+                                                p Nigel Gottlied
+                                            .box__bottom.box__bottom--big
+                                                //- h3.box__title Tên tài sản
+                                                //- p.box__sub Giá khởi điểm:
+                                                //- p.box__price 24.000.000.000 VND
+                                                //- p.box__time Thời gian: 28/07/2020
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left end in:
+                                                    
+                                                        span.box__left.box__left--green
+                                                            | 11
+                                                            span.text-lowercase.box__left--gray.font-weight-light d
+                                                            | 2
+                                                            span.text-lowercase.box__left--gray.font-weight-light h
+                                                            | 1
+                                                            span.text-lowercase.box__left--gray.font-weight-light m
+                                                            | 10
+                                                            span.text-lowercase.box__left--gray.font-weight-light s
+                                                        
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Bắt đầu tại:
+                                                    
+                                                        p.box__left.box__left--green 70 USD
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Đang chuyển hàng:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Free
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Nhiều phiên đấu thầu:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Yes
+                                                    
+                                        .content__bg.content__bg--big
+                                    .content__item.content__item--big
+                                        .content__box.box
+                                            .box__top
+                                                .box__image
+                                                    img(src="./images/dang-dau-gia/dang-dau-gia-1.png", alt="")
+                                                    //- button.btn.btn--dau-gia
+                                                    //-     img(src="./images/icon-dau-gia.png", alt="")
+                                                    span Vickrey auction
+                                            .box__mid
+                                                h2 Tên tài sản SDHFHFHHR
+                                                p Nigel Gottlied
+                                            .box__bottom.box__bottom--big
+                                                //- h3.box__title Tên tài sản
+                                                //- p.box__sub Giá khởi điểm:
+                                                //- p.box__price 24.000.000.000 VND
+                                                //- p.box__time Thời gian: 28/07/2020
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left end in:
+                                                    
+                                                        span.box__left.box__left--green
+                                                            | 11
+                                                            span.text-lowercase.box__left--gray.font-weight-light d
+                                                            | 2
+                                                            span.text-lowercase.box__left--gray.font-weight-light h
+                                                            | 1
+                                                            span.text-lowercase.box__left--gray.font-weight-light m
+                                                            | 10
+                                                            span.text-lowercase.box__left--gray.font-weight-light s
+                                                        
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Bắt đầu tại:
+                                                    
+                                                        p.box__left.box__left--green 70 USD
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Đang chuyển hàng:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Free
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Nhiều phiên đấu thầu:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Yes
+                                                    
+                                        .content__bg.content__bg--big
+                                    .content__item.content__item--big
+                                        .content__box.box
+                                            .box__top
+                                                .box__image
+                                                    img(src="./images/dang-dau-gia/dang-dau-gia-1.png", alt="")
+                                                    //- button.btn.btn--dau-gia
+                                                    //-     img(src="./images/icon-dau-gia.png", alt="")
+                                                    span Vickrey auction
+                                            .box__mid
+                                                h2 Tên tài sản SDHFHFHHR
+                                                p Nigel Gottlied
+                                            .box__bottom.box__bottom--big
+                                                //- h3.box__title Tên tài sản
+                                                //- p.box__sub Giá khởi điểm:
+                                                //- p.box__price 24.000.000.000 VND
+                                                //- p.box__time Thời gian: 28/07/2020
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left end in:
+                                                    
+                                                        span.box__left.box__left--green
+                                                            | 11
+                                                            span.text-lowercase.box__left--gray.font-weight-light d
+                                                            | 2
+                                                            span.text-lowercase.box__left--gray.font-weight-light h
+                                                            | 1
+                                                            span.text-lowercase.box__left--gray.font-weight-light m
+                                                            | 10
+                                                            span.text-lowercase.box__left--gray.font-weight-light s
+                                                        
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Bắt đầu tại:
+                                                    
+                                                        p.box__left.box__left--green 70 USD
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Đang chuyển hàng:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Free
+                                                .row
+                                                    .col.d-flex.aligin-items-center.justify-content-between
+                                                        p.box__left Nhiều phiên đấu thầu:
+                                                    
+                                                        p.box__left.text-capitalize.box__left--gray Yes
+                                                    
+                                        .content__bg.content__bg--big
+                                    
+                                
+                                                
+                                    //- .row
+                                    //-     .col-md-5.col-sm-12
+                                    //-     .col-md-7.col-sm-12
+
+                            .card-footer.custom-card__footer
+                                .row
+                                    .col-sm-4
+                                        nav.cm-pagination
+                                            ul.pagination.pagination-sm.m-0
+                                                li.page-item.disabled
+                                                    span.page-link.custom-card__page-link 
+                                                        img(src="./images/icon-arrow-white.png", alt="")
+                                                li.page-item.active
+                                                    span.page-link.custom-card__page-link 1
+                                                li.page-item
+                                                    a.page-link.custom-card__page-link(href='#') 2
+                                                li.page-item
+                                                    a.page-link.custom-card__page-link(href='3') 3
+                                                li.page-item.hidden-xs
+                                                    a.page-link.custom-card__page-link(href='#') 4
+                                                li.page-item
+                                                    a.page-link.custom-card__page-link(href='#', rel='next')
+                                                        img(src="./images/icon-arrow-white.png", alt="")
+                                    .col-sm-8.cm-pagination-text.d-flex.text-left.align-items-center
+                                        span
+                                            | cho thấy  
+                                            span 1 - 9
+                                            |  của 
+                                            span 30
+                                            |  data
+                        
+                                
+
+
+
+
+
+                
+                   
+        include footer/footer.pug
+
+
+
+    
+    //- script(src="./js/jquery-3.5.1.min.js")
+    //- script(src="./js/popper.min.js")
+    //- script(src="./js/bootstrap.min.js")
+    //- script(src="./js/owl.carousel.js")
+    //- script(src="./js/owl.carousel.min.js")
+    //- script(src="./js/moment.min.js")
+    //- script(src="./js/bootstrap-datetimepicker.min.js")
+    //- script(src="./js/datatables.min.js")
+    //- script(src="./js/dataTables.bootstrap4.min.js")
+    //- script(src="./js/table-datatables-responsive.min.js")
+
+    //- script(src="./js/custom.js")
+    include script/script.pug
+   

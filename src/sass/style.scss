@@ -547,6 +547,10 @@ body {
         display: flex;
         justify-content: space-between;
 
+        &--big {
+            flex-wrap: wrap;
+        }
+
 
         &--bds {
             flex-flow: row wrap;
@@ -560,6 +564,14 @@ body {
         box-sizing: border-box;
         position: relative;
         cursor: pointer;
+
+        &--big {
+            // width: 33.33%;
+            width: 34rem;
+            height: 59.3rem;
+            margin-bottom: 2rem;
+            margin-right: 2rem !important;
+        }
 
         &--bds {
             width: 48% !important;
@@ -610,6 +622,10 @@ body {
             margin-left: auto;
             right: 0;
         }
+
+        &--big {
+            height: 45.5rem !important;
+        }
     }
 
     &__item:hover &__bg {
@@ -630,6 +646,23 @@ body {
     &__item:hover .box__price {
         color: var(--primary) !important;
         opacity: 1 !important;
+    }
+
+    &__item:hover .box__mid h2 {
+        color: var(--white);
+    }
+
+    &__item:hover .box__mid p {
+        color: var(--primary);
+    }
+
+    &__item:hover .box__left--green {
+        color: var(--primary) !important;
+    }
+
+    &__item:hover .box__left--gray {
+        color: rgba(255, 255, 255, 0.5) !important;
+        ;
     }
 
     &__title {
@@ -727,6 +760,41 @@ body {
             max-width: 100%;
         }
 
+        & span {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            font-weight: 500;
+            text-align: center;
+            color: var(--third);
+            background: var(--primary);
+            position: absolute;
+            top: 1.2rem;
+            right: 1.6rem;
+            height: 2.6rem;
+            line-height: 2.6rem;
+            padding: 0 5px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                right: 100%;
+                top: 0;
+                border-top: 1.3rem solid transparent;
+                border-right: 1rem solid var(--primary);
+                border-bottom: 1.3rem solid transparent;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 100%;
+                top: 0;
+                border-top: 1.3rem solid transparent;
+                border-left: 1rem solid var(--primary);
+                border-bottom: 1.3rem solid transparent;
+            }
+        }
+
         & button {
             position: absolute;
             bottom: 1.3rem;
@@ -735,11 +803,57 @@ body {
         }
     }
 
+    &__mid {
+        width: 100%;
+        padding: 2rem 0;
+        border-bottom: 1px solid #d3d5d3;
+        ;
+
+        & h2 {
+            font-size: 2rem;
+            line-height: 2.3rem;
+            color: var(--black);
+            font-weight: bold;
+            margin-bottom: 0.7rem;
+        }
+
+        & p {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: var(--second);
+            margin: 0;
+        }
+    }
+
+    &__left {
+        font-size: 2rem !important;
+        line-height: 6rem !important;
+        color: var(--third);
+        text-transform: uppercase;
+        text-align: left;
+        opacity: 1 !important;
+        font-weight: 500;
+
+        &--green {
+            color: var(--second) !important;
+        }
+
+        &--gray {
+            color: rgba(27, 31, 26, 0.5) !important;
+        }
+    }
+
     &__bottom {
         padding: 2rem 0;
         width: 100%;
         box-sizing: border-box;
         text-align: center;
+
+        &--big {
+            padding-top: .6rem;
+            padding-bottom: 1.5rem;
+        }
+
 
         &--bds {
             padding: 2rem 0;
@@ -970,7 +1084,36 @@ body {
         line-height: 2.1rem;
         opacity: 0.5;
         text-align: right;
+        margin-top: 2rem;
     }
+
+    &__page-link {
+        width: 4.5rem;
+        height: 4.5rem;
+        color: var(--third) !important;
+        // opacity: 0.5 !important;
+        font-size: 2.1rem !important;
+        line-height: 4.5rem !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center;
+        margin-right: 1.4rem !important;
+        border: none;
+        border-radius: 5px;
+        background: #f4f4f4;
+    }
+
+    & .page-item.disabled .page-link {
+        background: #BBBCBA;
+        transform: rotate(180deg);
+        border-radius: 5px;
+    }
+
+    & .pagination-sm .page-item:last-child .page-link {
+        background: #BBBCBA;
+        border-radius: 5px;
+    }
+
 }
 
 .text-custom {
