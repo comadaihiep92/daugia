@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Dau gia</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./css/custom.css"/>
-    <link rel="stylesheet" href="./css/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="./css/style.css"/>
-  </head>
+<html lang="en"><!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Dau gia</title>
+      <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="./css/custom.css"/>
+      <link rel="stylesheet" href="./css/owl.carousel.min.css"/>
+      <link rel="stylesheet" href="./css/owl.theme.default.min.css"/>
+      <link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css"/>
+      <link rel="stylesheet" href="./css/dataTables.bootstrap4.min.css"/>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" href="./css/style.css"/>
+    </head>
+  </html>
   <body>
     <header class="header">
       <div class="header__top">
@@ -33,13 +37,11 @@
       </div>
       <div class="header__menu">
         <div class="containers">
-          <div class="menu">
-            <div class="menu__logo"><img src="./images/logo.png" alt="logo"/>
+          <div class="menu"><a class="menu__logo" href="/public/index.html"><img src="./images/logo.png" alt="logo"/>
               <div class="menu__head">
                 <h2>Đấu Giá Trực Tuyến</h2>
                 <p>Best Biding System</p>
-              </div>
-            </div>
+              </div></a>
             <div class="menu__collapse" onclick="myFunction(this)">
               <div class="bar1"></div>
               <div class="bar2"></div>
@@ -55,7 +57,7 @@
             </div>
             <div class="menu__search"><a class="btn btn--search" aria-labelledby="dropdownSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:"><img src="./images/icon-search.png" alt="search"/></a>
               <div class="dropdown-menu custom-search" aria-labelledby="dropdownSearch" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-105px, 40px, 0px);">
-                <form action="/auctions/search" method="get">
+                <form action="/public/search.html" method="get">
                   <input type="hidden" name="_token" value=""/>
                   <div id="search">
                     <input id="input" name="p_srch" placeholder="Search..." value=""/>
@@ -70,23 +72,23 @@
     </header>
     <main class="main">
       <div class="containers">
-        <div class="pagi">
-          <ul>
-            <li><a>Trang chủ</a></li>
-            <li>/ Auction /</li>
-            <li>Search</li>
-          </ul>
-        </div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-white mt-3 d-flex align-items-center text-custom">
+            <li class="breadcrumb-item"><a class="text-info" href="/public/index.html"><img src="./images/icon-home.png" alt=""/> Trang Chủ</a></li>
+            <li class="breadcrumb-item">Auction</li>
+            <li class="breadcrumb-item active" aria-current="page">Search</li>
+          </ol>
+        </nav>
         <div class="row">
-          <div class="col-12">
+          <div class="col">
             <div class="card card-outline custom-card mb-4 card-info">
               <div class="card-header">
                 <div class="row">
-                  <form class="cm-filter-form form-inline" action="http://classictetriz.com/auctions/search" method="get">
-                    <div class="col-lg-3">
-                      <div class="form-group clearfix">
-                        <div class="no-select">
-                          <select class="form-control cm-filter-sort-by" name="p_sort">
+                  <form class="cm-filter-form form-inline custom-card__form" action="http://classictetriz.com/auctions/search" method="get">
+                    <div class="col-sm-12 col-md-6 col-xl-3 p-0">
+                      <div class="form-group clearfix d-flex">
+                        <div class="no-select custom-card__arrow">
+                          <select class="form-control custom-card__control cm-filter-sort-by" name="p_sort">
                             <option value="">Sắp xếp theo</option>
                             <option value="0">Loại đấu giá</option>
                             <option value="1">Tình trạng đấu giá</option>
@@ -95,34 +97,38 @@
                             <option value="4">Tiền tệ</option>
                           </select>
                         </div>
-                        <div class="no-select">
-                          <select class="form-control cm-filter-order-by" name="p_ord">
+                        <div class="no-select custom-card__arrow">
+                          <select class="form-control custom-card__control cm-filter-order-by" name="p_ord">
                             <option value="d">Miêu tả</option>
                             <option value="a">Tăng dần</option>
                           </select>
                         </div>
-                        <button class="btn btn-info" type="submit"><i class="fa fa-arrow-right"></i></button>
+                        <button class="btn custom-card__button btn-info" type="submit"><i class="fa fa-arrow-right"></i></button>
                       </div>
                     </div>
-                    <div class="col-lg-3">
-                      <div class="form-group clearfix">
-                        <input class="form-control cm-filter-from-date datepicker" type="text" name="p_frm" placeholder="From date" value=""/>
-                        <input class="form-control cm-filter-to-date datepicker" type="text" name="p_to" placeholder="To date" value=""/>
-                        <button class="btn btn-info" type="submit"><i class="fa fa-arrow-right"></i></button>
+                    <div class="col-sm-12 col-md-6 col-xl-3 p-0">
+                      <div class="form-group clearfix d-flex">
+                        <div class="custom-card__row">
+                          <input class="form-control custom-card__control cm-filter-from-date datepicker" type="text" name="p_frm" placeholder="From date" value=""/>
+                        </div>
+                        <div class="custom-card__row">
+                          <input class="form-control custom-card__control cm-filter-to-date datepicker" type="text" name="p_to" placeholder="To date" value=""/>
+                        </div>
+                        <button class="btn custom-card__button btn-info" type="submit"><i class="fa fa-arrow-right"></i></button>
                       </div>
                     </div>
-                    <div class="col-lg-6">
-                      <div class="d-flex cm-filter-search-group" style="margin-right: 36px;">
-                        <div class="no-select flex-3">
-                          <select class="form-control" name="p_ssf">
+                    <div class="col-sm-12 col-md-10 col-xl-6 p-0">
+                      <div class="d-flex justify-content-end flex-wrap cm-filter-search-group"> 
+                        <div class="no-select flex-3 custom-card__arrow">
+                          <select class="form-control custom-card__control" name="p_ssf">
                             <option value="">Tất cả các lĩnh vực</option>
                             <option value="0">Tiêu đề đấu giá</option>
                             <option value="1">Thể loại</option>
                             <option value="2">Miêu tả</option>
                           </select>
                         </div>
-                        <div class="no-select flex-3">
-                          <select class="form-control cm-filter-comparison-operator select-compact" name="p_comp">
+                        <div class="no-select flex-3 custom-card__arrow">
+                          <select class="form-control custom-card__control cm-filter-comparison-operator select-compact" name="p_comp">
                             <option value="lk">Để tương tự</option>
                             <option value="e">chính xác để</option>
                             <option value="l">Nhỏ hơn</option>
@@ -132,16 +138,16 @@
                             <option value="ne">Không công bằng</option>
                           </select>
                         </div>
-                        <div class="flex-5 mr-1-percent">
-                          <input class="form-control cm-filter-search mr-0" type="text" name="p_srch" placeholder="search" value=""/>
-                        </div>
-                        <button class="btn btn-info" type="submit"><i class="fa fa-search"></i></button><a class="cm-filter-toggler btn btn-danger" href="javascript:;"><i class="fa fa-filter"></i></a>
+                        <div class="flex-5 mr-1-percent d-flex custom-card__search">
+                          <input class="form-control custom-card__control w-100 border-0 cm-filter-search" type="text" name="p_srch" placeholder="search" value=""/>
+                          <button class="btn" type="submit"><img src="./images/icon-search.png" alt=""/></button>
+                        </div><a class="cm-filter-toggler custom-card__button d-flex align-items-center justify-content-center" href="javascript:;"><img src="./images/icon-filter.png" alt=""/></a>
                       </div>
                     </div>
                   </form>
                 </div>
                 <div></div>
-                <form class="cm-filter-container" action="http://classictetriz.com/auctions/search" method="get">
+                <form class="cm-filter-container" action="http://classictetriz.com/auctions/search" method="get" style="display: none;">
                   <div class="cm-filter-wrapper row">
                     <div class="my-3 col-md-3">
                       <h6>Loại đấu giá</h6>
@@ -188,12 +194,53 @@
                   <button class="btn btn-info" type="submit"><i class="fa fa-filter"></i> Filter</button>
                 </form>
               </div>
-              <div class="card-body"></div>
-            </div>
-            <div class="row"></div>
-            <div class="card card-outline custom-card card-info">
-              <div class="card-body"></div>
-              <div class="card-footer">
+              <div class="card-body p-0">
+                <div class="dataTables_wrapper dt-bootstrap4 no-footer" id="DataTables_Table_0_wrapper">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="dt-buttons"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-12"></div>
+                    <div class="col-md-6 col-sm-12"></div>
+                  </div>
+                  <div class="table-scrollable">
+                    <table class="table cm-data-table dataTable no-footer dtr-inline" id="DataTables_Table_0" role="grid" style="width: 100%;">
+                      <thead>
+                        <tr class="custom-card__thead" role="row">
+                          <th class="all text-center border-0 sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Chi tiết: activate to sort column ascending" aria-sort="descending">Thumbnail</th>
+                          <th class="min-phone-l border-0 text-center sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="ref ID: activate to sort column ascending">Tên đấu giá</th>
+                          <th class="min-phone-l border-0 text-center sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Số tiền: activate to sort column ascending">Ngày bắt đầu</th>
+                          <th class="min-phone-l border-0 text-center sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Ngày: activate to sort column ascending">Ngày kết thúc</th>
+                          <th class="min-phone-l border-0 text-center sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Ngày: activate to sort column ascending">Trạng thái</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="odd" role="row">
+                          <td class="text-center sorting_1" tabindex="0"><img class="custom-card__image" src="./images/bds/bds-1.png" alt="bds1"/></td>
+                          <td class="text-center custom-card__title">Tài sản đấu giá II</td>
+                          <td class="text-center custom-card__date">05/06/2020</td>
+                          <td class="text-center custom-card__date">07/06/2020</td>
+                          <td class="text-center custom-card__status">Success</td>
+                        </tr>
+                        <tr class="even" role="row">
+                          <td class="text-center sorting_1" tabindex="0"><img class="custom-card__image" src="./images/bds/bds-2.png" alt="bds2"/></td>
+                          <td class="text-center custom-card__title">Tài sản IIXX</td>
+                          <td class="text-center custom-card__date">04/06/2020</td>
+                          <td class="text-center custom-card__date">06/06/2020</td>
+                          <td class="text-center custom-card__status">Failed</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-5 col-sm-12"></div>
+                    <div class="col-md-7 col-sm-12"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer custom-card__footer">
                 <div class="row">
                   <div class="col-sm-6"></div>
                   <div class="col-sm-6 cm-pagination-text"><span>cho thấy  <span>0</span> của <span>0</span> data</span></div>
@@ -241,121 +288,15 @@
       </div>
     </footer>
   </body>
-</html><!-- login modal -->
-<div class="custom-modal">
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-modal__dialog" role="document">
-      <div class="modal-content custom-modal__content">
-        <div class="modal-header custom-modal__header">
-          <h5 class="custom-modal__title" id="exampleModalLongTitle">Đăng nhập Bảng điều chỉnh</h5>
-          <button class="custom-modal__close close" type="button" data-dismiss="modal" aria-label="Close"><span class="custom-modal__icon-close" aria-hidden="true"></span></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-lg-12 col-md-12">
-              <form class="laraframe-form custom-login custom-modal__form cvalidate" action="#" method="post">
-                <div class="alert login-alert" id="loginAlert" role="alert" style="display: none;"></div>
-                <div class="custom-modal__row custom-modal__row--name">
-                  <input class="custom-modal__input" id="txt_uname" type="text" name="fake_255" placeholder="" value=""/>
-                  <label class="custom-modal__label" for="txt_uname">Username</label>
-                </div>
-                <div class="custom-modal__row custom-modal__row--pass">
-                  <input class="custom-modal__input" id="txt_pwd" type="password" name="fake_256" placeholder=""/>
-                  <label class="custom-modal__label" for="txt_pwd">Password</label>
-                </div>
-                <div class="form-row custom-modal__padding">
-                  <div class="checkbox col-6 custom-modal__checkbox">
-                    <input class="custom-modal__remember-input" id="rememberMe" type="checkbox" name="fake_260"/><span class="custom-modal__checkmark"></span>
-                    <label class="custom-modal__checkbox" for="rememberMe">Ghi nhớ</label>
-                  </div>
-                  <div class="col-6 text-right laraframe-form"><a class="custom-modal__forgot" href="#">Quên mật khẩu?</a></div>
-                </div>
-                <div class="form-group custom-modal__login">
-                  <button class="custom-modal__button" id="but_submit" type="submit">Đăng nhập</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer custom-modal__footer">
-          <div class="custom-modal__bottom">
-            <p class="custom-modal__text">Don not have an account?</p><a class="custom-modal__create" data-toggle="modal" data-dismiss="modal" aria-label="Close" data-target="#registerModal" href="javascript;">Tạo một cái</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div><!-- register modal -->
-<div class="custom-modal register-modal">
-  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-modal__dialog" role="document">
-      <div class="modal-content custom-modal__content">
-        <div class="modal-header custom-modal__header">
-          <h5 class="custom-modal__title" id="exampleModalLongTitle">Đăng ký</h5>
-          <button class="custom-modal__close close" type="button" data-dismiss="modal" aria-label="Close"><span class="custom-modal__icon-close" aria-hidden="true"></span></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-lg-12 col-md-12">
-              <form class="laraframe-form custom-login custom-modal__form cvalidate" action="#" method="post">
-                <input type="hidden" name="_token" value=""/>
-                <input type="hidden" value="fam" name="base_key"/>
-                <div class="alert login-alert" id="registerAlert" role="alert" style="display: none;"></div>
-                <div class="form-row">
-                  <div class="col-md-6">
-                    <div class="custom-modal__row custom-modal__row--name">
-                      <input class="custom-modal__input" id="first_name" type="text" name="fake_265" value="" placeholder="" data-cval-name="The first name field" data-cval-rules="required|escapeInput|alphaSpace"/>
-                      <label class="custom-modal__label" for="first_name">First Name</label><span class="invalid-feedback cval-error" data-cval-error="fake_265">The first name field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="first_name_alert" role="alert" style="display: none;"></span>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="custom-modal__row custom-modal__row--name">
-                      <input class="custom-modal__input" id="last_name" type="text" name="fake_266" value="" placeholder="" data-cval-name="The last name field" data-cval-rules="required|escapeInput|alphaSpace"/>
-                      <label class="custom-modal__label" for="last_name">Last Name</label><span class="invalid-feedback cval-error" data-cval-error="fake_266">The last name field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="last_name_alert" role="alert" style="display: none;"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="custom-modal__row custom-modal__row--name">
-                  <input class="custom-modal__input" id="reg-username" type="text" name="fake_255" value="" placeholder="" data-cval-name="The username field" data-cval-rules="required|escapeInput|alphaDash"/>
-                  <label class="custom-modal__label" for="reg-username">Username</label><span class="invalid-feedback cval-error" data-cval-error="fake_255">The username field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="username_alert" role="alert" style="display: none;"></span>
-                </div>
-                <div class="custom-modal__row custom-modal__row--name">
-                  <input class="custom-modal__input" id="reg-email" type="text" name="fake_249" value="" placeholder="" data-cval-name="The email field" data-cval-rules="required|escapeInput|email"/>
-                  <label class="custom-modal__label" for="reg-email">Email</label><span class="invalid-feedback cval-error" data-cval-error="fake_249">The email field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="email_alert" role="alert" style="display: none;"></span>
-                </div>
-                <div class="custom-modal__row custom-modal__row--name">
-                  <input class="custom-modal__input" id="reg-password" type="password" name="fake_256" placeholder="" data-cval-name="The password field" data-cval-rules="required|followedBy:password_confirmation"/>
-                  <label class="custom-modal__label" for="reg-password">Password</label><span class="invalid-feedback cval-error" data-cval-error="fake_256">The password field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="password_alert" role="alert" style="display: none;"></span>
-                </div>
-                <div class="custom-modal__row custom-modal__row--pass">
-                  <input class="custom-modal__input" id="reg-password_confirmation" type="password" name="password_confirmation" placeholder="" data-cval-name="The confirm password field" data-cval-rules="required|follow:fake_256"/>
-                  <label class="custom-modal__label" for="reg-password_confirmation">Confirm Password</label><span class="invalid-feedback cval-error" data-cval-error="password_confirmation">The confirm password field is required</span><span class="alert login-alert mb-0 mt-1 p-1 fz-12" id="password_confirmation_alert" role="alert" style="display: none;"></span>
-                </div>
-                <div class="form-row custom-modal__padding">
-                  <div class="checkbox pl-0 custom-modal__checkbox">
-                    <input class="custom-modal__remember-input" id="agreement" type="checkbox" name="check_agreement" data-cval-name="The accept our terms and conditions field" data-cval-rules="required"/><span class="custom-modal__checkmark"></span>
-                    <label class="custom-modal__checkbox" for="agreement">Chấp nhận các điều khoản và điều kiện của chúng tôi.</label><span class="invalid-feedback cval-error" data-cval-error="check_agreement"></span>
-                  </div>
-                </div>
-                <div class="form-group custom-modal__login">
-                  <button class="custom-modal__button" id="reg_submit" type="submit" disabled="disabled">Đăng ký</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer custom-modal__footer">
-          <div class="custom-modal__bottom">
-            <p class="custom-modal__text">Bạn co săn sàng để tạo một tai khoản?</p><a class="custom-modal__create" data-toggle="modal" data-dismiss="modal" aria-label="Close" data-target="#loginModal" href="javascript;">Đăng nhập</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="./js/jquery-3.5.1.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/owl.carousel.js"></script>
-    <script src="./js/owl.carousel.min.js"></script>
-    <script src="./js/custom.js"></script>
-  </div>
-</div>
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/owl.carousel.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script src="./js/moment.min.js"></script>
+  <script src="./js/bootstrap-datetimepicker.min.js"></script>
+  <script src="./js/datatables.min.js"></script>
+  <script src="./js/dataTables.bootstrap4.min.js"></script>
+  <script src="./js/table-datatables-responsive.min.js"></script>
+  <script src="./js/custom.js"></script>
+</html>

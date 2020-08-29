@@ -20,4 +20,13 @@ $(document).ready(function () {
     autoplay: true,
 
   })
+
+  //Init jquery Date Picker
+  $('.datepicker').datetimepicker({
+    format: 'YYYY-MM-DD',
+  });
+
+  $('.cm-filter-toggler').on('click', function () {
+    $('.cm-filter-container').slideToggle();
+  });
 });

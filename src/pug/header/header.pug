@@ -1,0 +1,38 @@
+header.header
+    .header__top
+        .containers
+            include login.pug
+    .header__menu
+        .containers
+            .menu
+                //- i.fas.fa-times.menu__close
+                a(href="/public/index.html").menu__logo
+                    img(src="./images/logo.png", alt="logo")
+                    .menu__head
+                        h2 Đấu Giá Trực Tuyến
+                        p Best Biding System
+                //- i.fas.fa-bars.menu__collapse
+                .menu__collapse(onclick='myFunction(this)')
+                    .bar1
+                    .bar2
+                    .bar3
+                .menu__nav
+                    ul.menu__list
+                        li.menu__item
+                            a(href="#") Tài sản đấu giá
+                        li.menu__item
+                            a(href="#") Liên hệ
+                        li.menu__item
+                            a(href="#") Tin tức
+                        li.menu__item
+                            a(href="#") Hỗ trợ
+                .menu__search
+                    a.btn.btn--search(aria-labelledby='dropdownSearch', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', href='javascript:')
+                        img(src="./images/icon-search.png", alt="search")
+                    .dropdown-menu.custom-search(aria-labelledby='dropdownSearch', x-placement='bottom-end', style='position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-105px, 40px, 0px);')
+                        form(action='/public/search.html', method='get')
+                            input(type='hidden', name='_token', value='')
+                            #search
+                                input#input(name='p_srch', placeholder='Search...', value='')
+                                button.btn.btn--search#button(type='submit')
+                                    img(src="./images/icon-search.png", alt="search")
