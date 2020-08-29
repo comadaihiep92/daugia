@@ -1059,6 +1059,28 @@ body {
         font-weight: 500;
     }
 
+    &__time {
+        font-size: 2.5rem;
+        line-height: 2.9rem;
+        font-weight: 500;
+    }
+
+    &__actionStatus {
+        font-size: 2.5rem;
+        line-height: 2.9rem;
+    }
+
+    &__read {
+        color: var(--black);
+        opacity: 0.5;
+        font-weight: normal;
+    }
+
+    &__unread {
+        font-weight: normal;
+        color: var(--second);
+    }
+
     .table {
         width: 100%;
         background: #f4f4f4;

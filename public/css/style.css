@@ -879,6 +879,24 @@ body {
   color: var(--second);
   font-weight: 500;
 }
+.custom-card__time {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  font-weight: 500;
+}
+.custom-card__actionStatus {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+}
+.custom-card__read {
+  color: var(--black);
+  opacity: 0.5;
+  font-weight: normal;
+}
+.custom-card__unread {
+  font-weight: normal;
+  color: var(--second);
+}
 .custom-card .table {
   width: 100%;
   background: #f4f4f4;
