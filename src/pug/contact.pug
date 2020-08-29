@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+html(lang="en")
+    include head/head.pug
+        
+    body
+        include header/header.pug
+        main.main
+            .containers
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb.bg-white.mt-3.d-flex.align-items-center
+                        li.breadcrumb-item
+                            a.text-info(href='/public/index.html').d-flex.align-items-center
+                                img(src="./images/icon-home.png", alt="").mr-3
+                                span.text-custom Trang Chủ
+                        li.breadcrumb-item.text-custom
+                            | Auction
+                        li.breadcrumb-item.active.text-custom(aria-current='page') Search
+
+                .row.contact
+                    .col-12.mt-3
+                        .contact-bg
+                            .col
+                                h2.text-center.contact__title Liên hệ
+                            .row
+                                // Start: comment form
+                                .col-12
+                                    // Start: contact form
+                                    .agent-form
+                                        form.form-horizontal.cvalidate(method='POST', action='#', accept-charset='UTF-8')
+                                            input(name='_token', type='hidden', value='')
+                                            input(type='hidden', name='_method', value='post')
+                                            input(type='hidden', value='bza', name='base_key')
+                                            .row
+                                                .col-md-6.col-sm-12.mt-4
+                                                    .col.d-flex.align-items-center
+                                                        label.mb-0.contact__label(for="") Name:
+                                                        input.form-control.contact__input(type='text', name='fake_427', value='', placeholder='')
+                                                    span.invalid-feedback.cval-error.d-block(data-cval-error='fake_427')
+                                                .col-md-6.col-sm-12.m-sm-top-24.mt-4
+                                                    .col.d-flex.align-items-center
+                                                        label.mb-0.contact__label Phone:
+                                                        input.form-control.contact__input(type='text', name='fake_453', value='', placeholder='')
+                                                    span.invalid-feedback.cval-error.d-block(data-cval-error='fake_453')
+                                                .col-md-6.col-sm-12.mt-4
+                                                    .col.d-flex.align-items-center
+                                                        label.mb-0.contact__label Email:
+                                                        input.form-control.contact__input(type='email', name='fake_497', value='', placeholder='')
+                                                    span.invalid-feedback.cval-error.d-block(data-cval-error='fake_497')
+                                                .col-md-6.col-sm-12.mt-4
+                                                    .col.d-flex.align-items-center
+                                                        label.mb-0.contact__label Subject:
+                                                        input.form-control.contact__input(type='text', name='subject', value='', placeholder='')
+                                                    span.invalid-feedback.cval-error.d-block(data-cval-error='subject')
+                                                .col-12.d-flex.align-items-center.flex-column
+                                                    textarea#Textarea1.form-control.mt-5.pt-4.contact__input(name='message', value='', placeholder='Write Massage', rows='5')
+                                                    span.invalid-feedback.cval-error.d-block(data-cval-error='message')
+                                                    button.btn.custom-btn.mt-5.custom-modal__button.mb-5(type='submit', name='button') Send Massage
+                                    // End: contact form
+                                    // Start: comment form
+
+
+
+
+
+
+                
+                   
+        include footer/footer.pug
+    include script/script.pug
+   

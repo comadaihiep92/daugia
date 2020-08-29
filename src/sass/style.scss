@@ -980,6 +980,36 @@ body {
     opacity: 0.5 !important;
 }
 
+// contact
+.contact {
+    &__title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        color: var(--second);
+        margin-bottom: 4.8rem;
+        font-weight: 900;
+    }
+
+    &__label {
+        width: 3.3rem;
+        font-size: 1.8rem;
+        color: var(--third);
+        font-weight: 500;
+        margin-right: 5.7rem !important;
+    }
+
+    &__input {
+        background: #f4f4f4;
+        // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        height: 5.4rem;
+        font-size: 1.8rem;
+        border: none;
+        padding-left: 4.8rem;
+    }
+}
+
+
 // footer
 
 footer {
