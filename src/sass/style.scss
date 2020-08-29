@@ -1150,6 +1150,16 @@ body {
         border: none;
         padding-left: 4.8rem;
     }
+
+    &__button {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        height: 5.4rem;
+        background: #f3f3f3;
+        border-radius: 5px;
+        color: var(--third) !important;
+        opacity: 0.5;
+    }
 }
 
 
@@ -1617,6 +1627,97 @@ input[type="password"]:focus:not([readonly])+label {
 }
 
 
+// image add
+
+.fileinput {
+    margin-bottom: 9px;
+    display: inline-block;
+    max-width: 100vw;
+}
+
+.fileinput-new {
+    width: 200px !important;
+    height: 180px !important;
+}
+
+.fileinput .img-thumbnail {
+    position: relative;
+}
+
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.fileinput .img-thumbnail>img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.fileinput .img-thumbnail {
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.fileinput .img-thumbnail {
+    position: relative;
+}
+
+.fileinput-exists .fileinput-new,
+.fileinput-new .fileinput-exists {
+    display: none;
+}
+
+.fileinput-preview {
+    max-width: 200px !important;
+    max-height: 180px !important;
+}
+
+.btn-file>input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    font-size: 23px;
+    height: 100%;
+    width: 100%;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.fileinput-exists .fileinput-new,
+.fileinput-new .fileinput-exists {
+    display: none;
+}
+
+.btn-file {
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+
+.btn-file {
+    width: 100px !important;
+}
+
+.btn.btn-danger.remove {
+    position: absolute;
+    left: 25px;
+    border-radius: 40px;
+    top: 10px;
+}
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {

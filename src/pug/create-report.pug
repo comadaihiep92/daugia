@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+html(lang="en")
+    include head/head.pug
+        
+    body
+        include header/header.pug
+        main.main
+            .containers
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb.bg-white.mt-3.d-flex.align-items-center
+                        li.breadcrumb-item
+                            a.text-info(href='/public/index.html').d-flex.align-items-center
+                                img(src="./images/icon-home.png", alt="").mr-3
+                                span.text-custom Trang Chủ
+                        li.breadcrumb-item.text-custom
+                            | Dispute
+                        li.breadcrumb-item.active.text-custom(aria-current='page') Create
+
+                .row.contact
+                    .col-12.mt-3
+                        .contact-bg
+                            .col
+                                h2.text-center.contact__title Tạo báo cáo
+                            form.form-horizontal.cvalidate(method='POST', action='http://classictetriz.com/dispute', accept-charset='UTF-8', enctype='multipart/form-data')
+                                input(name='_token', type='hidden', value='u7CuRg7bKGdsZUkJl1npnQvNFD6sY91IfccxMnQ4')
+                                input(type='hidden', name='_method', value='post')
+                                input(type='hidden', value='bzx', name='base_key')
+
+                                .card-body.py-5
+                                    .row.justify-content-center
+                                        .col-sm-10
+                                            .form-group.row
+                                                label.col-sm-3.col-form-label.contact__label.d-flex.align-items-center.justify-content-between(for='fake_480')
+                                                    | Select Report Type 
+                                                    span.float-right.d-inline-block :
+                                                .col-sm-8
+                                                    select#fake_480.contact__input.w-100(name='fake_480')
+                                                        option(value='1') Vấn đề trong đấu giá
+                                                        option(value='2') Vấn đề của người bán
+                                                        option(value='3') vấn đề giao dịch
+                                                        option(value='4') vấn đề vận chuyển
+                                                        option(value='5') vấn đề khác
+                                            .form-group.row
+                                                label.col-sm-3.col-form-label.contact__label.d-flex.align-items-center.justify-content-between(for='fake_455')
+                                                    | Reference ID 
+                                                    span.float-right.d-inline-block :
+                                                .col-sm-8
+                                                    input#fake_455.form-control.contact__input(data-cval-name='The Reference ID', data-cval-rules='required|min:3|max:255', name='fake_455', type='text')
+                                                    span.invalid-feedback.cval-error(data-cval-error='fake_455')
+                                            .form-group.row
+                                                label.col-sm-3.col-form-label.contact__label.d-flex.align-items-center.justify-content-between(for='fake_429')
+                                                    | Title 
+                                                    span.float-right.d-inline-block :
+                                                .col-sm-8
+                                                    input#fake_429.form-control.contact__input(data-cval-name='The Title field', data-cval-rules='required|min:3|max:255', name='fake_429', type='text')
+                                                    span.invalid-feedback.cval-error(data-cval-error='fake_429')
+                                            .form-group.row.mt-4.mb-0
+                                                label.col-sm-3.col-form-label.contact__label.d-flex.align-items-center.justify-content-between(for='fake_440')
+                                                    | Description 
+                                                    span.float-right.d-inline-block :
+                                                .col-sm-8
+                                                    textarea#fake_440.form-control-sm.contact__input.w-100(data-cval-name='The Description field', rows='3', data-cval-rules='required|min:20|max:255', name='fake_440', cols='50')
+                                                    span.invalid-feedback.cval-error(data-cval-error='fake_440')
+                                            // Start: dispute image
+                                            .form-group.form-row.mt-4
+                                                label.col-sm-3.col-form-label.contact__label.d-flex.align-items-center.justify-content-between(for='fake_478')
+                                                    | Image
+                                                    span.float-right.d-inline-block :
+                                                .col-sm-8
+                                                    #preview-multi-img
+                                                        #TextBoxContainer.row
+                                                        button#btnAdd.btn.text-secondary.bg-custom-gray.contact__button(type='button', data-toggle='tooltip') Thêm ảnh
+                                            // End: dispute image
+                                            .col-12.d-flex.align-items-center.flex-column
+                                                
+                                                //- button.btn.custom-btn.mt-5.custom-modal__button.mb-5(type='submit', name='button') Send Massage
+                                                button#two.form-submission-button.has-spinner.my-2.custom-modal__button(value='Submit Design', type='submit', disabled='disabled') Nộp báo cáo
+
+
+
+
+
+
+                
+                   
+        include footer/footer.pug
+    include script/script.pug
+    
+   

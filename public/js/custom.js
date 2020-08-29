@@ -30,3 +30,49 @@ $(document).ready(function () {
     $('.cm-filter-container').slideToggle();
   });
 });
+
+// $(document).ready(function () {
+//   $('.cvalidate').cValidate();
+// });
+
+$(function () {
+  var count = 0
+  $(document).on("click", "#btnAdd", function () {
+    if (count < 2) {
+      $("#TextBoxContainer").append(GetDynamicTextBox());
+      count++
+      if (count == 2) {
+        $(this).remove()
+      }
+    }
+  });
+  $("body").on("click", ".remove", function () {
+    $(this).closest("div").remove();
+    count--
+    if (count == 1) {
+      $('#preview-multi-img').append('<button id="btnAdd" type="button" class="btn btn-primary">Thêm ảnh</button>')
+    }
+  });
+});
+
+function GetDynamicTextBox() {
+  return '<div class="col-lg-4 mb-3">' +
+    '<div class="fileinput fileinput-new" data-provides="fileinput">' +
+    '<div class="fileinput fileinput-new" data-provides="fileinput">' +
+    '<div class="fileinput-new img-thumbnail mb-3">' +
+    '<img class="img" src="http://classictetriz.com/storage/images/know_your_customer_images/preview.png"  alt="">' +
+    '</div>' +
+    '<div class="fileinput-preview fileinput-exists mb-3 img-thumbnail"></div>' +
+    '<div>' +
+    '<span class="btn btn-sm btn-outline-success btn-file mr-2" >' +
+    '<span class="fileinput-new">Select</span>' +
+    '<span class="fileinput-exists">Change</span>' +
+    '<input class="multi-input" id="fake_215" name="images[]" type="file">' +
+    '</span>' +
+    '<a href="#" class="btn btn-sm btn-outline-danger fileinput-exists" data-dismiss="fileinput">Remove</a>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '<td><button type="button" class="btn btn-danger remove"><i class="fa fa-minus"></i></button></td>' +
+    '</div>'
+}
