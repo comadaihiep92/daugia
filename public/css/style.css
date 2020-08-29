@@ -813,8 +813,8 @@ body {
 .text-custom {
   font-size: 1.8rem;
   line-height: 2.1rem;
-  color: var(--third);
-  opacity: 0.5;
+  color: var(--third) !important;
+  opacity: 0.5 !important;
 }
 
 footer {
