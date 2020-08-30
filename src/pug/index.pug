@@ -2,9 +2,79 @@
 html(lang="en")
     include head/head.pug  
     body
+        .toggle-menu.d-none
+            .toggle-menu__body
+                .toggle-menu__button.toggle-menu__button--active
+                    img(src="./images/icon-back-menu.png", alt="icon-back-menu.png")
+                    p Toggle menu
+                img(src="./images/logo.png", alt="logo.png" style="width: 8.8rem; height: 8.2rem")
+                .toggle-menu__head
+                    h2 Đấu Giá Trực Tuyến
+                    p Best Biding System
+                div(style='padding: 0 3.2rem;')
+                    .custom-modal__button.toggle-menu__money
+                        p Số dư:
+                        p 89$
+                .toggle-menu__title Menu điều hướng
+                ul.toggle-menu__list
+                    li
+                        div
+                            img(src="./images/icon-dashboard.png", alt="icon-home.png")
+                            p Dashboard
+                        img(src="./images/icon-open.png", alt="icon-open.png")
+                    li
+                        div
+                            img(src="./images/icon-tai-chinh.png", alt="icon-home.png")
+                            p Tài chính của tôi
+                        img(src="./images/icon-open.png", alt="icon-open.png")
+                    li
+                        div
+                            img(src="./images/icon-ql-dau-gia.png", alt="icon-home.png")
+                            p Quản lý đấu giá
+                        img(src="./images/icon-open.png", alt="icon-open.png")
+                    li
+                        div
+                            img(src="./images/icon-ql-ho-so.png", alt="icon-home.png")
+                            p Quản lý hồ sơ
+                        img(src="./images/icon-open.png", alt="icon-open.png")
+                    li
+                        div
+                            img(src="./images/icon-thong-bao.png", alt="icon-home.png")
+                            p Thông báo của tôi
+                        img(src="./images/icon-open.png", alt="icon-open.png" style='visibility: hidden;')
+                    li
+                        div
+                            img(src="./images/icon-ql-bao-cao.png", alt="icon-home.png")
+                            p Quản lý báo cáo
+                        img(src="./images/icon-open.png", alt="icon-open.png")
+                .toggle-menu__title Điều hướng trang web
+                ul.toggle-menu__list
+                    li
+                        div
+                            img(src="./images/icon-tat-ca-dau-gia.png", alt="icon-home.png")
+                            p Tất cả đấu giá
+                        img(src="./images/icon-open.png", alt="icon-open.png")
+                    li
+                        div
+                            img(src="./images/icon-cac-loai-dau-gia.png", alt="icon-home.png")
+                            p Các loại đấu giá
+                        img(src="./images/icon-open.png", alt="icon-open.png")
+                    li
+                        div
+                            img(src="./images/icon-lien-he-us.png", alt="icon-home.png")
+                            p Liên hệ chúng tôi
+                        img(src="./images/icon-open.png", alt="icon-open.png")
+                    li
+                        div
+                            img(src="./images/icon-quy-dinh-dau-gia.png", alt="icon-home.png")
+                            p Quy định đấu giá
+                        img(src="./images/icon-open.png", alt="icon-open.png")
         include header/header.pug
         main.main
             .containers
+                .toggle-menu__button.toggle-menu__button--inactive
+                    img(src="./images/icon-toggle.png", alt="icon-toggle.png")
+                    p Toggle menu
                 .content
                     .content__now
                         span
