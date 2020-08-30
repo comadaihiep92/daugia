@@ -507,7 +507,7 @@ body {
   max-height: 30.7rem;
 }
 .content__item:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 1rem !important;
 }
 .content__bg {
   background: #1B1F1A;
