@@ -87,34 +87,66 @@
                       <div class="qlhoso__bottom">
                         <div class="common-nav profile__nav">
                           <ul class="nav nav-tabs border-0 d-flex justify-content-between" id="profileTab" role="tablist">
-                            <li class="nav-item"><a class="nav-link" href="/public/manage-profile.html">Thông tin cá nhân</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="/public/manage-profile.html">Thông tin cá nhân</a></li>
                             <li class="nav-item"><a class="nav-link" href="/public/change-password.html">Đổi mật khẩu</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="/public/address.html">địa chỉ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/address.html">địa chỉ</a></li>
                             <li class="nav-item"><a class="nav-link" href="/public/verification.html">Xác nhận Địa chỉ của bạn</a></li>
                             <li class="nav-item"><a class="nav-link" href="/public/verification-with-id.html">Xác minh danh tính của bạn</a></li>
                           </ul>
                         </div>
                         <div class="card card-outline border-top-0 card-info profile__card">
-                          <div class="card-body profile__body">
-                            <div class="row d-flex justify-content-center">
-                              <div class="col-lg-8 col-sm-10">
-                                <div class="personal-info mt-4 profile__addpage">
-                                  <div class="profile__default">
-                                    <p class="m-0">Default Address</p>
-                                  </div>
-                                  <ul class="d-flex flex-column">
-                                    <li><span class="profile__info"><img src="./images/icon-location.png" alt=""/>                                                                    location :</span>                                                                South Carmel,
-                                                                                                      Myanmar
-                                    </li>
-                                    <li><span class="profile__info"><img src="./images/icon-phone-2.png" alt=""/>                                                                    phone :</span>                                                                902-693-8415 x6556</li>
-                                    <li><span class="profile__info"><img src="./images/icon-email-2.png" alt=""/>                                                                    post code :</span>                                                                34320-9332</li>
-                                    <li><span class="profile__info"><img src="./images/icon-verify.png" alt=""/>                                                                    Verification Status :</span><span class="profile__info profile__info--green"> Yes</span></li>
-                                  </ul>
+                          <div class="card-body edit">
+                            <form class="form-horizontal edit-profile-form" method="POST" action="http://classictetriz.com/backend/profile/update" accept-charset="UTF-8">
+                              <input name="_method" type="hidden" value="PUT"/>
+                              <input name="_token" type="hidden" value="dKItQccv8s1zg9k2OoBlvI2kVyz7x0WDZNxAk52q"/>
+                              <input type="hidden" value="zab" name="base_key"/>
+                              <div class="row">
+                                <div class="col-sm-6 form-group">
+                                  <div class="d-flex align-items-center edit__row">
+                                    <label class="control-label required edit__label" for="fake_360">Name:</label>
+                                    <input class="form-control form-control-sm" id="fake_360" data-cval-name="The first name field" data-cval-rules="required|escapeInput|alphaSpace" name="fake_360" type="text" value="Mr"/>
+                                  </div><span class="invalid-feedback cval-error" data-cval-error="fake_360"></span>
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                  <div class="d-flex align-items-center edit__row">
+                                    <label class="control-label required edit__label" for="fake_361">Phone::</label>
+                                    <input class="form-control form-control-sm" id="fake_361" data-cval-name="The last name field" data-cval-rules="required|escapeInput|alphaSpace" name="fake_361" type="text" value="Buyer"/>
+                                  </div><span class="invalid-feedback cval-error" data-cval-error="fake_361"></span>
                                 </div>
                               </div>
-                            </div>
+                              <div class="form-group d-flex align-items-center edit__row">
+                                <label class="control-label required edit__label">Địa chỉ:</label>
+                                <input class="form-control form-control-sm"/>
+                              </div>
+                              <div class="form-group d-flex align-items-center edit__row">
+                                <label class="control-label required edit__label">Quốc gia:</label>
+                                <select class="form-control form-control-sm"></select>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <label class="required edit__label control-label text-muted required" for="fake_367">Zip / Mã bài:</label>
+                                    <input class="form-control" id="fake_367" data-cval-post_code="Store post_code required" data-cval-rules="required|min:3" name="fake_367" type="text"/><span class="invalid-feedback cval-error" data-cval-error="fake_367"></span>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <label class="required edit__label control-label text-muted required" for="fake_367">Zip / Mã bài:</label>
+                                    <input class="form-control" id="fake_367" data-cval-post_code="Store post_code required" data-cval-rules="required|min:3" name="fake_367" type="text"/><span class="invalid-feedback cval-error" data-cval-error="fake_367"></span>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <label class="required edit__label control-label text-muted required" for="fake_367">Zip / Mã bài:</label>
+                                    <select class="form-control" id="fake_367" data-cval-post_code="Store post_code required" data-cval-rules="required|min:3" name="fake_367" type="text"></select><span class="invalid-feedback cval-error" data-cval-error="fake_367"></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group profile__box">
+                                <button class="btn px-4 mt-2 float-right profile__btn profile__btn--active">Cập nhật</button><a class="btn d-inline-block mt-2 mr-3 px-4 float-right profile__btn" href="/public/manage-profile.html">Hủy bỏ</a>
+                              </div>
+                            </form>
                           </div>
-                          <div class="card-footer qlhoso__footer"><a class="btn text-center bg-custom-gray fz-14 float-right d-inline-block custom-btn border-0 custom-modal__button" href="/public/add-address.html">Thêm địa chỉ mới</a></div>
                         </div>
                       </div>
                     </div>
