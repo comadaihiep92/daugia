@@ -1112,6 +1112,7 @@ body {
   line-height: 2.8rem;
   color: var(--third) !important;
   opacity: 0.5;
+  background: none;
 }
 .profile .nav-tabs .nav-link.active, .profile .nav-tabs .nav-item.show .nav-link {
   border: 0;
@@ -1240,6 +1241,18 @@ body {
   font-size: 1.8rem;
   line-height: 2.1rem;
   color: var(--black);
+}
+
+.qlhoso__top {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+.qlhoso__top h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: var(--second);
+  font-weight: 900;
+  margin-bottom: 5rem;
 }
 
 footer {

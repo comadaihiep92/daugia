@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+html(lang="en")
+    include head/head.pug
+        
+    body
+        include header/header.pug
+        main.main
+            .containers
+
+                .profile
+                    
+                    .row
+                        .col-12
+                            .card.profile__card
+                                .card-body.qlhoso
+                                    .row
+                                        .col-md-12
+                                            .qlhoso__top.d-flex.flex-column.align-items-center
+                                                h2.text-center Quản lý hồ sơ
+                                                .col-xl-4.align-self-center.profile__image--ql.d-flex.align-items-center.justify-content-center
+                                                    img.img-rounded.img-fluid.m-0(src='./images/icon-avata.png', alt='Hình ảnh hồ sơ cá nhân')
+                                                    button.btn.btn--add
+                                                        
+                                                //- .col-xl-8.clearfix
+                                                h3.font-weight-bold.d-inline-block.profile__name Mr Buyer
+                                                a.btn.text-center.bg-custom-gray.fz-14.float-right.d-inline-block.custom-btn.border-0.custom-modal__button(href='/public/profile.html') BACK TO PROFILE
+                                            .qlhoso__bottom
+                                                .common-nav.profile__nav
+                                                    ul#profileTab.nav.nav-tabs.border-0(role='tablist')
+                                                        li.nav-item
+                                                            a.nav-link.active(href='http://classictetriz.com/profile/manage-profile') Thông tin cá nhân
+                                                        li.nav-item
+                                                            a.nav-link(href='http://classictetriz.com/profile/change-password') Đổi mật khẩu
+                                                        li.nav-item
+                                                            a.nav-link(href='http://classictetriz.com/profile/address') địa chỉ
+                                                        li.nav-item
+                                                            a.nav-link(href='http://classictetriz.com/profile/verification') Xác nhận Địa chỉ của bạn
+                                                        li.nav-item
+                                                            a.nav-link(href='http://classictetriz.com/profile/verification-with-id') Xác minh danh tính của bạn
+                                                .card.card-outline.border-top-0.card-info
+                                                    .card-body.profile__body
+                                                        .row
+                                                            .col-12
+                                                                .table-responsive-sm
+                                                                    table.table.table-borderless
+                                                                        tbody
+                                                                            tr
+                                                                                th Tên
+                                                                                td Mr Buyer
+                                                                            tr
+                                                                                th Vai trò người dùng
+                                                                                td Buyer
+                                                                            tr
+                                                                                th E-mail
+                                                                                td
+                                                                                    | buyer@codemen.org
+                                                                                    span.badge.badge-success đã kích hoạt
+                                                                            tr
+                                                                                th tên tài khoản
+                                                                                td buyer
+                                                                            tr
+                                                                                th Địa chỉ
+                                                                                td address 32/1 khulna, Bangladesh
+                                                                            tr
+                                                                                th Tình trạng tài khoản
+                                                                                td
+                                                                                    span.badge.badge-success Hoạt động
+                                                                            tr
+                                                                                th Tình hình tài chính
+                                                                                td
+                                                                                    span.badge.badge-success Hoạt động
+                                                                            tr
+                                                                                th Tình trạng bảo trì truy cập
+                                                                                td
+                                                                                    span.badge.badge-danger Không hoạt động
+                                                    .card-footer
+                                                        a.btn.text-center.bg-custom-gray.fz-14.d-inline-block.custom-btn.border-0(href='http://classictetriz.com/profile/edit') Sửa hồ sơ
+
+
+
+
+
+                
+                   
+        include footer/footer.pug
+
+
+
+    
+    //- script(src="./js/jquery-3.5.1.min.js")
+    //- script(src="./js/popper.min.js")
+    //- script(src="./js/bootstrap.min.js")
+    //- script(src="./js/owl.carousel.js")
+    //- script(src="./js/owl.carousel.min.js")
+    //- script(src="./js/moment.min.js")
+    //- script(src="./js/bootstrap-datetimepicker.min.js")
+    //- script(src="./js/datatables.min.js")
+    //- script(src="./js/dataTables.bootstrap4.min.js")
+    //- script(src="./js/table-datatables-responsive.min.js")
+
+    //- script(src="./js/custom.js")
+    include script/script.pug
+   

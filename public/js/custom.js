@@ -91,3 +91,11 @@ $(function () {
     $(".toggle-menu__button--inactive").removeClass("d-none");
   });
 });
+
+
+function checkInput() {
+  let inputA = document.querySelector('.custom-modal__input');
+  console.log("input: ", inputA.value, "input: ", inputA)
+}
+
+checkInput();
