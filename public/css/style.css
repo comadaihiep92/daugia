@@ -1902,6 +1902,210 @@ input[type=password]:focus:not([readonly]) + label {
   height: 1.8rem;
 }
 
+.view-info__name {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+.view-info__line {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: var(--third);
+  opacity: 0.5;
+}
+.view-info__line img {
+  width: 2rem;
+  height: 2rem;
+}
+.view-info__item img {
+  width: 2rem;
+  height: 2rem;
+}
+.view-info__money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.6rem;
+  margin: 0 auto 2.5rem;
+}
+.view-info__money p {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  margin-bottom: 0;
+  height: fit-content;
+}
+.view-info__money p:first-child {
+  color: var(--white);
+}
+.view-info__tab {
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+.view-info__title {
+  width: 100%;
+  background: rgba(27, 31, 26, 0.1);
+  border-radius: 5px;
+  padding: 2.5rem;
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  margin-bottom: 2rem;
+}
+.view-info__title h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+}
+.view-info__title--time {
+  display: flex;
+  justify-content: flex-end;
+}
+.view-info__title--time h5 {
+  font-weight: bold;
+  color: var(--primary);
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  margin-bottom: 0;
+}
+.view-info__title--time p {
+  color: rgba(27, 31, 26, 0.5);
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  margin-bottom: 0;
+  margin-right: 2rem;
+}
+.view-info__information {
+  background-color: var(--black);
+  width: 100%;
+  border-radius: 5px;
+}
+.view-info__information--header {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  text-transform: uppercase;
+  color: var(--primary);
+  padding: 2.5rem;
+  border-bottom: 3px solid rgba(27, 31, 26, 0.5);
+}
+.view-info__information--line {
+  background-color: var(--black);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(27, 31, 26, 0.5);
+}
+.view-info__information--body {
+  background-color: var(--black);
+}
+.view-info__information--left {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.view-info__information--right {
+  font-size: 1.4rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+.view-info__comment {
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+.view-info__comment--no {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: var(--third);
+  opacity: 0.5;
+}
+.view-info__cmtContainer {
+  background: rgba(27, 31, 26, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 2.5rem;
+}
+.view-info__submit {
+  position: absolute;
+  top: -1.5rem;
+  right: 0px;
+}
+.view-info__textarea {
+  background: transparent;
+  border: 0;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
+.view-info__textarea:hover {
+  border: 0;
+}
+.view-info__form {
+  position: relative;
+  padding-right: 7.5rem;
+}
+.view-info__operator {
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  border-radius: 5px;
+  height: 5.2rem;
+  padding: 0.8rem;
+}
+.view-info__minus, .view-info__plus {
+  width: 5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.view-info__input {
+  width: calc(100% - 10rem);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-top: 0;
+  border-bottom: 0;
+  background-color: transparent;
+}
+.view-info__register {
+  width: 65%;
+  margin: 2.6rem auto 4rem;
+  color: var(--third);
+  background-color: var(--second);
+}
+.view-info__register::after {
+  border-left-color: var(--second);
+}
+.view-info__register::before {
+  border-right-color: var(--second);
+}
+.view-info__tab {
+  width: calc(100% / 3);
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  border: 0;
+  color: rgba(27, 31, 26, 0.5);
+  text-align: center;
+  padding: 1.2rem 0;
+  font-weight: normal;
+}
+.view-info__tab--active {
+  color: var(--third);
+  font-weight: 900;
+  border-bottom: 3px solid var(--second);
+}
+.view-info__tab--content {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: var(--third);
+}
+
+#view-info__main-picture {
+  max-width: 97rem;
+  max-height: 55rem;
+  margin-bottom: 2rem;
+}
+#view-info__list-picture img {
+  width: 22.5rem;
+  height: 12rem;
+  margin-right: 2rem;
+  margin-bottom: 3.2rem;
+}
+
 .fileinput {
   margin-bottom: 9px;
   display: inline-block;
