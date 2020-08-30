@@ -90,4 +90,10 @@ $(function () {
     $(".toggle-menu").addClass("d-none");
     $(".toggle-menu__button--inactive").removeClass("d-none");
   });
+  $("#toggle-menu__title-1").click(function () {
+    $("#toggle-menu__title-1 + ul").slideToggle(500);
+  });
+  $("#toggle-menu__title-2").click(function () {
+    $("#toggle-menu__title-2 + ul").slideToggle(500);
+  });
 });
