@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+html(lang="en")
+    include head/head.pug
+        
+    body
+        include header/header.pug
+        main.main
+            .containers
+
+                .profile
+                    
+                    .row
+                        .col-12
+                            .card.border-0
+                                .card-body.qlhoso
+                                    .row
+                                        .col-md-12
+                                            .qlhoso__top.d-flex.flex-column.align-items-center
+                                                h2.text-center Quản lý hồ sơ
+                                                .qlhoso__image
+                                                    img.img-rounded.img-fluid.m-0(src='./images/icon-avata.png', alt='Hình ảnh hồ sơ cá nhân')
+                                                    a(href="#").btn.btn--add
+                                                        
+                                                //- .col-xl-8.clearfix
+                                                h3.font-weight-bold.d-inline-block.profile__name.qlhoso__name Mr Buyer
+                                                a.btn.text-center.bg-custom-gray.fz-14.float-right.d-inline-block.custom-btn.border-0.custom-modal__button(href='/public/profile.html') BACK TO PROFILE
+                                            .qlhoso__bottom
+                                                .common-nav.profile__nav
+                                                    //- include nav-hoso/nav.pug
+                                                    ul#profileTab.nav.nav-tabs.border-0.d-flex.justify-content-between(role='tablist')
+                                                        li.nav-item
+                                                            a.nav-link.active(href='/public/manage-profile.html') Thông tin cá nhân
+                                                        li.nav-item
+                                                            a.nav-link(href='/public/change-password.html') Đổi mật khẩu
+                                                        li.nav-item
+                                                            a.nav-link(href='/public/address.html') địa chỉ
+                                                        li.nav-item
+                                                            a.nav-link(href='/public/verification.html') Xác nhận Địa chỉ của bạn
+                                                        li.nav-item
+                                                            a.nav-link(href='/public/verification-with-id.html') Xác minh danh tính của bạn
+                                                .card.card-outline.border-top-0.card-info.profile__card
+                                                    .card-body.edit
+                                                        form.form-horizontal.edit-profile-form(method='POST', action='http://classictetriz.com/backend/profile/update', accept-charset='UTF-8')
+                                                            input(name='_method', type='hidden', value='PUT')
+                                                            input(name='_token', type='hidden', value='dKItQccv8s1zg9k2OoBlvI2kVyz7x0WDZNxAk52q')
+                                                            input(type='hidden', value='zab', name='base_key')
+                                                            .row
+                                                                .col-sm-6.form-group
+                                                                    .d-flex.align-items-center.edit__row
+                                                                        label.control-label.required.edit__label(for='fake_360') First name:
+                                                                        input#fake_360.form-control.form-control-sm(data-cval-name='The first name field', data-cval-rules='required|escapeInput|alphaSpace', name='fake_360', type='text', value='Mr')
+                                                                    span.invalid-feedback.cval-error(data-cval-error='fake_360')
+                                                                .col-sm-6.form-group
+                                                                    .d-flex.align-items-center.edit__row
+                                                                        label.control-label.required.edit__label(for='fake_361') Last name:
+                                                                        input#fake_361.form-control.form-control-sm(data-cval-name='The last name field', data-cval-rules='required|escapeInput|alphaSpace', name='fake_361', type='text', value='Buyer')
+                                                                    span.invalid-feedback.cval-error(data-cval-error='fake_361')
+                                                            .form-group.d-flex.align-items-center.edit__row
+                                                                label.control-label.required.edit__label Email:
+                                                                input.form-control.form-control-sm
+                                                            .form-group.d-flex.align-items-center.edit__row
+                                                                label.control-label.required.edit__label Tên tài khoản:
+                                                                input.form-control.form-control-sm
+                                                            .form-group
+                                                                .d-flex.align-items-center.edit__row
+                                                                    label.control-label(for='fake_299').edit__label Địa chỉ:
+                                                                    textarea#fake_299.form-control.form-control-sm(rows='2', data-cval-name='The address name field', data-cval-rules='escapeInput', name='fake_299', cols='50') address 32/1 khulna, Bangladesh
+                                                                span.invalid-feedback.cval-error(data-cval-error='fake_299')
+                                                            
+                                                            .form-group.profile__box
+                                                                button.btn.px-4.mt-2.float-right.profile__btn.profile__btn--active Cập nhật
+                                                                a.btn.d-inline-block.mt-2.mr-3.px-4.float-right.profile__btn(href='/public/manage-profile.html') Hủy bỏ
+
+
+
+
+
+                
+                   
+        include footer/footer.pug
+
+
+
+    
+    //- script(src="./js/jquery-3.5.1.min.js")
+    //- script(src="./js/popper.min.js")
+    //- script(src="./js/bootstrap.min.js")
+    //- script(src="./js/owl.carousel.js")
+    //- script(src="./js/owl.carousel.min.js")
+    //- script(src="./js/moment.min.js")
+    //- script(src="./js/bootstrap-datetimepicker.min.js")
+    //- script(src="./js/datatables.min.js")
+    //- script(src="./js/dataTables.bootstrap4.min.js")
+    //- script(src="./js/table-datatables-responsive.min.js")
+
+    //- script(src="./js/custom.js")
+    include script/script.pug
+   

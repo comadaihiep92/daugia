@@ -99,9 +99,22 @@ $(function () {
 });
 
 
-function checkInput() {
-  let inputA = document.querySelector('.custom-modal__input');
-  console.log("input: ", inputA.value, "input: ", inputA)
-}
+// function checkInput() {
+//   let inputA = document.querySelector('.custom-modal__input');
+//   console.log("input: ", inputA.value, "input: ", inputA)
+// }
 
-checkInput();
+// checkInput();
+
+
+var app = new Vue({
+  el: '#identification',
+  data: {
+    nextSelect: '',
+  },
+  methods: {
+    onChange: function (event) {
+      this.nextSelect = event.target.value;
+    }
+  },
+})
