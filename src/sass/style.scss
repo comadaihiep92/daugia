@@ -2024,15 +2024,16 @@ input[type="password"]:focus:not([readonly])+label {
         justify-content: space-between;
         transform: rotate(90deg);
         box-shadow: 6px -6px 6px rgba(27, 31, 26, 0.25);
-        position: absolute;
 
         &--inactive {
+            position: fixed;
             top: 22rem;
             left: -5.8rem;
             z-index: 99;
         }
 
         &--active {
+            position: absolute;
             top: 12.5rem;
             right: -9.9rem;
         }
