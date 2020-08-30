@@ -26,17 +26,18 @@ html(lang="en")
                                                 a.btn.text-center.bg-custom-gray.fz-14.float-right.d-inline-block.custom-btn.border-0.custom-modal__button(href='/public/profile.html') BACK TO PROFILE
                                             .qlhoso__bottom
                                                 .common-nav.profile__nav
+                                                    //- include nav-hoso/nav.pug
                                                     ul#profileTab.nav.nav-tabs.border-0.d-flex.justify-content-between(role='tablist')
                                                         li.nav-item
-                                                            a.nav-link.active(href='/public/manage-profile') Thông tin cá nhân
+                                                            a.nav-link.active(href='/public/manage-profile.html') Thông tin cá nhân
                                                         li.nav-item
-                                                            a.nav-link(href='/public/change-password') Đổi mật khẩu
+                                                            a.nav-link(href='/public/change-password.html') Đổi mật khẩu
                                                         li.nav-item
-                                                            a.nav-link(href='/public/address') địa chỉ
+                                                            a.nav-link(href='/public/address.html') địa chỉ
                                                         li.nav-item
-                                                            a.nav-link(href='/public/verification') Xác nhận Địa chỉ của bạn
+                                                            a.nav-link(href='/public/verification.html') Xác nhận Địa chỉ của bạn
                                                         li.nav-item
-                                                            a.nav-link(href='/public/verification-with-id') Xác minh danh tính của bạn
+                                                            a.nav-link(href='/public/verification-with-id.html') Xác minh danh tính của bạn
                                                 .card.card-outline.border-top-0.card-info.profile__card
                                                     .card-body.profile__body
                                                         .row.d-flex.justify-content-center
@@ -60,19 +61,19 @@ html(lang="en")
                                                                                 td.qlhoso__label buyer
                                                                             tr
                                                                                 th.qlhoso__label.font-weight-bold Địa chỉ
-                                                                                td.qlhoso__label.badge.text-secondary Yes
+                                                                                td.qlhoso__label.badge.text-secondary.text-left Yes
                                                                                     
                                                                             tr
                                                                                 th.qlhoso__label.font-weight-bold Tình trạng tài khoản
-                                                                                td.badge.text-secondary.qlhoso__label Yes
+                                                                                td.badge.text-secondary.qlhoso__label.text-left Yes
                                                                                     
                                                                             tr
                                                                                 th.qlhoso__label.font-weight-bold Tình hình tài chính
-                                                                                td.badge.text-secondary.qlhoso__label Yes
+                                                                                td.badge.text-secondary.qlhoso__label.text-left Yes
                                                                                     
                                                                             tr
                                                                                 th.qlhoso__label.font-weight-bold Tình trạng bảo trì truy cập
-                                                                                td.badge.text-danger.qlhoso__label No
+                                                                                td.badge.text-danger.qlhoso__label.text-left No
                                                                                     
                                                     .card-footer.qlhoso__footer
                                                         a.btn.text-center.bg-custom-gray.fz-14.float-right.d-inline-block.custom-btn.border-0.custom-modal__button(href='/public/edit.html') Sửa hồ sơ
