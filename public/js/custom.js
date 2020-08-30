@@ -97,3 +97,11 @@ $(function () {
     $("#toggle-menu__title-2 + ul").slideToggle(500);
   });
 });
+
+
+function checkInput() {
+  let inputA = document.querySelector('.custom-modal__input');
+  console.log("input: ", inputA.value, "input: ", inputA)
+}
+
+checkInput();

@@ -1341,6 +1341,7 @@ body {
         line-height: 2.8rem;
         color: var(--third) !important;
         opacity: 0.5;
+        background: none;
 
     }
 
@@ -1518,6 +1519,22 @@ body {
 
 }
 
+
+// qlhoso
+.qlhoso {
+    &__top {
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+
+        & h2 {
+            font-size: 3rem;
+            line-height: 3.5rem;
+            color: var(--second);
+            font-weight: 900;
+            margin-bottom: 5rem;
+        }
+    }
+}
 
 // footer
 
