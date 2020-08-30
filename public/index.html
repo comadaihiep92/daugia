@@ -16,8 +16,78 @@
     </head>
   </html>
   <body>
-    <div class="toggle-menu">
-      <div class="toggle-menu__body"></div>
+    <div class="toggle-menu d-none">
+      <div class="toggle-menu__body">
+        <div class="toggle-menu__button toggle-menu__button--active"><img src="./images/icon-back-menu.png" alt="icon-back-menu.png"/>
+          <p>Toggle menu</p>
+        </div><img src="./images/logo.png" alt="logo.png" style="width: 8.8rem; height: 8.2rem"/>
+        <div class="toggle-menu__head">
+          <h2>Đấu Giá Trực Tuyến</h2>
+          <p>Best Biding System</p>
+        </div>
+        <div style="padding: 0 3.2rem;">
+          <div class="custom-modal__button toggle-menu__money">
+            <p>Số dư:</p>
+            <p>89$</p>
+          </div>
+        </div>
+        <div class="toggle-menu__title">Menu điều hướng</div>
+        <ul class="toggle-menu__list">
+          <li>
+            <div><img src="./images/icon-dashboard.png" alt="icon-home.png"/>
+              <p>Dashboard</p>
+            </div><img src="./images/icon-open.png" alt="icon-open.png"/>
+          </li>
+          <li>
+            <div><img src="./images/icon-tai-chinh.png" alt="icon-home.png"/>
+              <p>Tài chính của tôi</p>
+            </div><img src="./images/icon-open.png" alt="icon-open.png"/>
+          </li>
+          <li>
+            <div><img src="./images/icon-ql-dau-gia.png" alt="icon-home.png"/>
+              <p>Quản lý đấu giá</p>
+            </div><img src="./images/icon-open.png" alt="icon-open.png"/>
+          </li>
+          <li>
+            <div><img src="./images/icon-ql-ho-so.png" alt="icon-home.png"/>
+              <p>Quản lý hồ sơ</p>
+            </div><img src="./images/icon-open.png" alt="icon-open.png"/>
+          </li>
+          <li>
+            <div><img src="./images/icon-thong-bao.png" alt="icon-home.png"/>
+              <p>Thông báo của tôi</p>
+            </div><img src="./images/icon-open.png" alt="icon-open.png" style="visibility: hidden;"/>
+          </li>
+          <li>
+            <div><img src="./images/icon-ql-bao-cao.png" alt="icon-home.png"/>
+              <p>Quản lý báo cáo</p>
+            </div><img src="./images/icon-open.png" alt="icon-open.png"/>
+          </li>
+        </ul>
+        <div class="toggle-menu__title">Điều hướng trang web</div>
+        <ul class="toggle-menu__list">
+          <li>
+            <div><img src="./images/icon-tat-ca-dau-gia.png" alt="icon-home.png"/>
+              <p>Tất cả đấu giá</p>
+            </div><img src="./images/icon-open.png" alt="icon-open.png"/>
+          </li>
+          <li>
+            <div><img src="./images/icon-cac-loai-dau-gia.png" alt="icon-home.png"/>
+              <p>Các loại đấu giá</p>
+            </div><img src="./images/icon-open.png" alt="icon-open.png"/>
+          </li>
+          <li>
+            <div><img src="./images/icon-lien-he-us.png" alt="icon-home.png"/>
+              <p>Liên hệ chúng tôi</p>
+            </div><img src="./images/icon-open.png" alt="icon-open.png"/>
+          </li>
+          <li>
+            <div><img src="./images/icon-quy-dinh-dau-gia.png" alt="icon-home.png"/>
+              <p>Quy định đấu giá</p>
+            </div><img src="./images/icon-open.png" alt="icon-open.png"/>
+          </li>
+        </ul>
+      </div>
     </div>
     <header class="header">
       <div class="header__top">
@@ -29,7 +99,7 @@
               <div class="dropdown-menu custon-dropdown"><span>Thông báo</span><a href="#">Xem tất cả thông báo</a></div>
             </div>
             <div class="header__cols" id="editLogin"><a class="header__link" aria-labelledby="dropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:"><img src="./images/icon-user.png" alt="phone"/><span>Hi, Buyer</span></a>
-              <div class="dropdown-menu custom-dropdown" aria-labelledby="dropdownProfile" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-105px, 40px, 0px);"><a class="dropdown-item" href="#"><img src="./images/icon-profile.png" alt=""/><span>Hồ sơ</span></a><a class="dropdown-item" href="#"><img src="./images/icon-noti-blue.png" alt=""/><span>Thông báo của tôi</span></a><a class="dropdown-item" href="#"><img src="./images/icon-report.png" alt=""/><span>Báo cáo một vấn đề</span></a><a class="dropdown-item" href="#"><img src="./images/icon-transition.png" alt=""/><span>Giao dịch của tôi</span></a><a class="dropdown-item" href="#"><img src="./images/icon-wallet.png" alt=""/><span>Ví của tôi</span></a><a class="dropdown-item" href="#"><img src="./images/icon-setting.png" alt=""/><span>Quản lý hồ sơ</span></a>
+              <div class="dropdown-menu custom-dropdown" aria-labelledby="dropdownProfile" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-105px, 40px, 0px);"><a class="dropdown-item" href="#"><img src="./images/icon-profile.png" alt=""/><span>Hồ sơ</span></a><a class="dropdown-item" href="/public/notification.html"><img src="./images/icon-noti-blue.png" alt=""/><span>Thông báo của tôi</span></a><a class="dropdown-item" href="/public/create-report.html"><img src="./images/icon-report.png" alt=""/><span>Báo cáo một vấn đề</span></a><a class="dropdown-item" href="#"><img src="./images/icon-transition.png" alt=""/><span>Giao dịch của tôi</span></a><a class="dropdown-item" href="#"><img src="./images/icon-wallet.png" alt=""/><span>Ví của tôi</span></a><a class="dropdown-item" href="#"><img src="./images/icon-setting.png" alt=""/><span>Quản lý hồ sơ</span></a>
                 <div class="dropdown-divider custom-dropdown__divider"></div><a class="dropdown-item" href="#"><img src="./images/icon-logout.png" alt=""/><span> Đăng xuất</span></a>
               </div>
             </div>
@@ -75,7 +145,7 @@
     </header>
     <main class="main">
       <div class="containers">
-        <div class="toggle-menu__button"><img src="./images/icon-toggle.png" alt="icon-toggle.png"/>
+        <div class="toggle-menu__button toggle-menu__button--inactive"><img src="./images/icon-toggle.png" alt="icon-toggle.png"/>
           <p>Toggle menu</p>
         </div>
         <div class="content">
