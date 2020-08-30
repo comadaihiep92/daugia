@@ -1245,6 +1245,35 @@ body {
   line-height: 2.1rem;
   color: var(--black);
 }
+.profile__addpage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 0 2rem;
+}
+.profile__default {
+  width: 5.8rem;
+  height: 100%;
+  background: var(--second);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile__default p {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  font-size: 2rem;
+  line-height: 2.3rem;
+  font-weight: 500;
+  color: var(--third);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .qlhoso {
   margin-bottom: 5rem;
@@ -2215,5 +2244,20 @@ input[type=password]:focus:not([readonly]) + label {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .profile__addpage {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile__default {
+    width: 100%;
+  }
+
+  .profile__default p {
+    width: 100%;
+    writing-mode: unset;
+    transform: unset;
   }
 }
