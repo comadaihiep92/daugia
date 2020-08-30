@@ -81,6 +81,8 @@ body {
 
 // header top
 .header {
+    margin-bottom: 1rem;
+
     &__menu {
         border-bottom: 1px solid rgba(27, 31, 26, 0.1);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
@@ -1522,6 +1524,8 @@ body {
 
 // qlhoso
 .qlhoso {
+    margin-bottom: 5rem;
+
     &__top {
         padding-top: 5rem;
         padding-bottom: 10rem;
@@ -1533,6 +1537,41 @@ body {
             font-weight: 900;
             margin-bottom: 5rem;
         }
+    }
+
+    &__image {
+        background: url('../images/bg-qlhoso.png') no-repeat center;
+        width: 16.8rem;
+        height: 20rem;
+        position: relative;
+        margin-bottom: 2rem;
+
+        & a {
+            position: absolute;
+            width: 3.1rem;
+            height: 3.1rem;
+            background: url('../images/btn-add.png');
+            right: 30px;
+            top: 35px;
+        }
+    }
+
+    &__name {
+        margin-bottom: 5rem;
+    }
+
+    &__label {
+        font-size: 2rem;
+        line-height: 8rem;
+        color: var(--third);
+
+    }
+
+    &__footer {
+        border: none;
+        background: none;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
     }
 }
 
@@ -1765,6 +1804,7 @@ footer {
         border: none;
         cursor: pointer;
         padding: 0;
+        text-transform: uppercase;
 
 
 
