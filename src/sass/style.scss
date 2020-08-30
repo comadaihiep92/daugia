@@ -1890,6 +1890,37 @@ input[type="password"]:focus:not([readonly])+label {
 
 }
 
+.toggle-menu {
+    &__button {
+        background: var(--white);
+        border: 3px solid var(--primary);
+        border-bottom: 0;
+        border-radius: 10px 10px 0 0px;
+        width: 15.6rem;
+        display: flex;
+        padding: 0.6rem 1.4rem;
+        justify-content: space-between;
+        transform: rotate(90deg);
+        box-shadow: 6px -3px 6px rgba(27, 31, 26, 0.25);
+        position: fixed;
+        top: 20rem;
+        left: -6.1rem;
+        z-index: 99;
+
+        img {
+            width: 22px;
+            height: 16px;
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+}
+
 
 // image add
 

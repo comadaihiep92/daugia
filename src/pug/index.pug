@@ -2,9 +2,15 @@
 html(lang="en")
     include head/head.pug  
     body
+       
+        .toggle-menu
+            .toggle-menu__body
         include header/header.pug
         main.main
             .containers
+                .toggle-menu__button
+                    img(src="./images/icon-toggle.png", alt="icon-toggle.png")
+                    p Toggle menu
                 .content
                     .content__now
                         span
