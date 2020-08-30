@@ -11,71 +11,71 @@ html(lang="en")
                     
                     .row
                         .col-12
-                            .card.profile__card
+                            .card.border-0
                                 .card-body.qlhoso
                                     .row
                                         .col-md-12
                                             .qlhoso__top.d-flex.flex-column.align-items-center
                                                 h2.text-center Quản lý hồ sơ
-                                                .col-xl-4.align-self-center.profile__image--ql.d-flex.align-items-center.justify-content-center
+                                                .col-xl-4.align-self-center.qlhoso__image.d-flex.align-items-center.justify-content-center
                                                     img.img-rounded.img-fluid.m-0(src='./images/icon-avata.png', alt='Hình ảnh hồ sơ cá nhân')
-                                                    button.btn.btn--add
+                                                    a(href="#").btn.btn--add
                                                         
                                                 //- .col-xl-8.clearfix
-                                                h3.font-weight-bold.d-inline-block.profile__name Mr Buyer
+                                                h3.font-weight-bold.d-inline-block.profile__name.qlhoso__name Mr Buyer
                                                 a.btn.text-center.bg-custom-gray.fz-14.float-right.d-inline-block.custom-btn.border-0.custom-modal__button(href='/public/profile.html') BACK TO PROFILE
                                             .qlhoso__bottom
                                                 .common-nav.profile__nav
-                                                    ul#profileTab.nav.nav-tabs.border-0(role='tablist')
+                                                    ul#profileTab.nav.nav-tabs.border-0.d-flex.justify-content-between(role='tablist')
                                                         li.nav-item
-                                                            a.nav-link.active(href='http://classictetriz.com/profile/manage-profile') Thông tin cá nhân
+                                                            a.nav-link.active(href='/public/manage-profile') Thông tin cá nhân
                                                         li.nav-item
-                                                            a.nav-link(href='http://classictetriz.com/profile/change-password') Đổi mật khẩu
+                                                            a.nav-link(href='/public/change-password') Đổi mật khẩu
                                                         li.nav-item
-                                                            a.nav-link(href='http://classictetriz.com/profile/address') địa chỉ
+                                                            a.nav-link(href='/public/address') địa chỉ
                                                         li.nav-item
-                                                            a.nav-link(href='http://classictetriz.com/profile/verification') Xác nhận Địa chỉ của bạn
+                                                            a.nav-link(href='/public/verification') Xác nhận Địa chỉ của bạn
                                                         li.nav-item
-                                                            a.nav-link(href='http://classictetriz.com/profile/verification-with-id') Xác minh danh tính của bạn
-                                                .card.card-outline.border-top-0.card-info
+                                                            a.nav-link(href='/public/verification-with-id') Xác minh danh tính của bạn
+                                                .card.card-outline.border-top-0.card-info.profile__card
                                                     .card-body.profile__body
-                                                        .row
-                                                            .col-12
+                                                        .row.d-flex.justify-content-center
+                                                            .col-8
                                                                 .table-responsive-sm
                                                                     table.table.table-borderless
                                                                         tbody
                                                                             tr
-                                                                                th Tên
-                                                                                td Mr Buyer
+                                                                                th.qlhoso__label.font-weight-bold Tên
+                                                                                td.qlhoso__label Mr Buyer
                                                                             tr
-                                                                                th Vai trò người dùng
-                                                                                td Buyer
+                                                                                th.qlhoso__label.font-weight-bold Vai trò người dùng
+                                                                                td.qlhoso__label Buyer
                                                                             tr
-                                                                                th E-mail
-                                                                                td
+                                                                                th.qlhoso__label.font-weight-bold E-mail
+                                                                                td.qlhoso__label
                                                                                     | buyer@codemen.org
                                                                                     span.badge.badge-success đã kích hoạt
                                                                             tr
-                                                                                th tên tài khoản
-                                                                                td buyer
+                                                                                th.qlhoso__label.font-weight-bold tên tài khoản
+                                                                                td.qlhoso__label buyer
                                                                             tr
-                                                                                th Địa chỉ
-                                                                                td address 32/1 khulna, Bangladesh
+                                                                                th.qlhoso__label.font-weight-bold Địa chỉ
+                                                                                td.qlhoso__label.badge.text-secondary Yes
+                                                                                    
                                                                             tr
-                                                                                th Tình trạng tài khoản
-                                                                                td
-                                                                                    span.badge.badge-success Hoạt động
+                                                                                th.qlhoso__label.font-weight-bold Tình trạng tài khoản
+                                                                                td.badge.text-secondary.qlhoso__label Yes
+                                                                                    
                                                                             tr
-                                                                                th Tình hình tài chính
-                                                                                td
-                                                                                    span.badge.badge-success Hoạt động
+                                                                                th.qlhoso__label.font-weight-bold Tình hình tài chính
+                                                                                td.badge.text-secondary.qlhoso__label Yes
+                                                                                    
                                                                             tr
-                                                                                th Tình trạng bảo trì truy cập
-                                                                                td
-                                                                                    span.badge.badge-danger Không hoạt động
-                                                    .card-footer
-                                                        a.btn.text-center.bg-custom-gray.fz-14.d-inline-block.custom-btn.border-0(href='http://classictetriz.com/profile/edit') Sửa hồ sơ
-
+                                                                                th.qlhoso__label.font-weight-bold Tình trạng bảo trì truy cập
+                                                                                td.badge.text-danger.qlhoso__label No
+                                                                                    
+                                                    .card-footer.qlhoso__footer
+                                                        a.btn.text-center.bg-custom-gray.fz-14.float-right.d-inline-block.custom-btn.border-0.custom-modal__button(href='/public/edit.html') Sửa hồ sơ
 
 
 

@@ -75,65 +75,63 @@
         <div class="profile">
           <div class="row">
             <div class="col-12">
-              <div class="card profile__card">
+              <div class="card border-0">
                 <div class="card-body qlhoso">
                   <div class="row">
                     <div class="col-md-12">
                       <div class="qlhoso__top d-flex flex-column align-items-center">
                         <h2 class="text-center">Quản lý hồ sơ</h2>
-                        <div class="col-xl-4 align-self-center profile__image--ql d-flex align-items-center justify-content-center"><img class="img-rounded img-fluid m-0" src="./images/icon-avata.png" alt="Hình ảnh hồ sơ cá nhân"/>
-                          <button class="btn btn--add"></button>
-                        </div>
-                        <h3 class="font-weight-bold d-inline-block profile__name">Mr Buyer</h3><a class="btn text-center bg-custom-gray fz-14 float-right d-inline-block custom-btn border-0 custom-modal__button" href="/public/profile.html">BACK TO PROFILE</a>
+                        <div class="col-xl-4 align-self-center qlhoso__image d-flex align-items-center justify-content-center"><img class="img-rounded img-fluid m-0" src="./images/icon-avata.png" alt="Hình ảnh hồ sơ cá nhân"/><a class="btn btn--add" href="#"></a></div>
+                        <h3 class="font-weight-bold d-inline-block profile__name qlhoso__name">Mr Buyer</h3><a class="btn text-center bg-custom-gray fz-14 float-right d-inline-block custom-btn border-0 custom-modal__button" href="/public/profile.html">BACK TO PROFILE</a>
                       </div>
                       <div class="qlhoso__bottom">
                         <div class="common-nav profile__nav">
-                          <ul class="nav nav-tabs border-0" id="profileTab" role="tablist">
-                            <li class="nav-item"><a class="nav-link active" href="http://classictetriz.com/profile/manage-profile">Thông tin cá nhân</a></li>
-                            <li class="nav-item"><a class="nav-link" href="http://classictetriz.com/profile/change-password">Đổi mật khẩu</a></li>
-                            <li class="nav-item"><a class="nav-link" href="http://classictetriz.com/profile/address">địa chỉ</a></li>
-                            <li class="nav-item"><a class="nav-link" href="http://classictetriz.com/profile/verification">Xác nhận Địa chỉ của bạn</a></li>
-                            <li class="nav-item"><a class="nav-link" href="http://classictetriz.com/profile/verification-with-id">Xác minh danh tính của bạn</a></li>
+                          <ul class="nav nav-tabs border-0 d-flex justify-content-between" id="profileTab" role="tablist">
+                            <li class="nav-item"><a class="nav-link active" href="/public/manage-profile">Thông tin cá nhân</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/change-password">Đổi mật khẩu</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/address">địa chỉ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/verification">Xác nhận Địa chỉ của bạn</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public/verification-with-id">Xác minh danh tính của bạn</a></li>
                           </ul>
                         </div>
-                        <div class="card card-outline border-top-0 card-info">
+                        <div class="card card-outline border-top-0 card-info profile__card">
                           <div class="card-body profile__body">
-                            <div class="row">
-                              <div class="col-12">
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-8">
                                 <div class="table-responsive-sm">
                                   <table class="table table-borderless">
                                     <tbody>
                                       <tr>
-                                        <th>Tên</th>
-                                        <td>Mr Buyer</td>
+                                        <th class="qlhoso__label font-weight-bold">Tên</th>
+                                        <td class="qlhoso__label">Mr Buyer</td>
                                       </tr>
                                       <tr>
-                                        <th>Vai trò người dùng</th>
-                                        <td>Buyer</td>
+                                        <th class="qlhoso__label font-weight-bold">Vai trò người dùng</th>
+                                        <td class="qlhoso__label">Buyer</td>
                                       </tr>
                                       <tr>
-                                        <th>E-mail</th>
-                                        <td>buyer@codemen.org<span class="badge badge-success">đã kích hoạt</span></td>
+                                        <th class="qlhoso__label font-weight-bold">E-mail</th>
+                                        <td class="qlhoso__label">buyer@codemen.org<span class="badge badge-success">đã kích hoạt</span></td>
                                       </tr>
                                       <tr>
-                                        <th>tên tài khoản</th>
-                                        <td>buyer</td>
+                                        <th class="qlhoso__label font-weight-bold">tên tài khoản</th>
+                                        <td class="qlhoso__label">buyer</td>
                                       </tr>
                                       <tr>
-                                        <th>Địa chỉ</th>
-                                        <td>address 32/1 khulna, Bangladesh</td>
+                                        <th class="qlhoso__label font-weight-bold">Địa chỉ</th>
+                                        <td class="qlhoso__label badge text-secondary">Yes</td>
                                       </tr>
                                       <tr>
-                                        <th>Tình trạng tài khoản</th>
-                                        <td><span class="badge badge-success">Hoạt động</span></td>
+                                        <th class="qlhoso__label font-weight-bold">Tình trạng tài khoản</th>
+                                        <td class="badge text-secondary qlhoso__label">Yes</td>
                                       </tr>
                                       <tr>
-                                        <th>Tình hình tài chính</th>
-                                        <td><span class="badge badge-success">Hoạt động</span></td>
+                                        <th class="qlhoso__label font-weight-bold">Tình hình tài chính</th>
+                                        <td class="badge text-secondary qlhoso__label">Yes</td>
                                       </tr>
                                       <tr>
-                                        <th>Tình trạng bảo trì truy cập</th>
-                                        <td><span class="badge badge-danger">Không hoạt động</span></td>
+                                        <th class="qlhoso__label font-weight-bold">Tình trạng bảo trì truy cập</th>
+                                        <td class="badge text-danger qlhoso__label">No</td>
                                       </tr>
                                     </tbody>
                                   </table>
@@ -141,7 +139,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="card-footer"><a class="btn text-center bg-custom-gray fz-14 d-inline-block custom-btn border-0" href="http://classictetriz.com/profile/edit">Sửa hồ sơ</a></div>
+                          <div class="card-footer qlhoso__footer"><a class="btn text-center bg-custom-gray fz-14 float-right d-inline-block custom-btn border-0 custom-modal__button" href="/public/edit.html">Sửa hồ sơ</a></div>
                         </div>
                       </div>
                     </div>
