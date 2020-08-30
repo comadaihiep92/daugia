@@ -6,7 +6,7 @@ header.header
         .containers
             .menu
                 //- i.fas.fa-times.menu__close
-                a(href="/public/index.html").menu__logo
+                a(href="../public/index.html").menu__logo
                     img(src="./images/logo.png", alt="logo")
                     .menu__head
                         h2 Đấu Giá Trực Tuyến
@@ -19,9 +19,9 @@ header.header
                 .menu__nav
                     ul.menu__list
                         li.menu__item
-                            a(href="/public/all-dau-gia.html") Tài sản đấu giá
+                            a(href="../public/all-dau-gia.html") Tài sản đấu giá
                         li.menu__item
-                            a(href="/public/contact.html") Liên hệ
+                            a(href="../public/contact.html") Liên hệ
                         li.menu__item
                             a(href="#") Tin tức
                         li.menu__item
@@ -30,7 +30,7 @@ header.header
                     a.btn.btn--search(aria-labelledby='dropdownSearch', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', href='javascript:')
                         img(src="./images/icon-search.png", alt="search")
                     .dropdown-menu.custom-search(aria-labelledby='dropdownSearch', x-placement='bottom-end', style='position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-105px, 40px, 0px);')
-                        form(action='/public/search.html', method='get')
+                        form(action='../public/search.html', method='get')
                             input(type='hidden', name='_token', value='')
                             #search
                                 input#input(name='p_srch', placeholder='Search...', value='')
