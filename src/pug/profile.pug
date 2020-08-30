@@ -20,7 +20,7 @@ html(lang="en")
                                 .card-body.profile__body
                                     .row
                                         .col-xl-4.align-self-center.profile__image.d-flex.align-items-center.justify-content-center
-                                            img.img-rounded.img-fluid(src='./images/icon-avata-default.png', alt='Hình ảnh hồ sơ cá nhân')
+                                            img.img-rounded.img-fluid.m-0(src='./images/icon-avata-default.png', alt='Hình ảnh hồ sơ cá nhân')
                                         .col-xl-8.clearfix
                                             h3.font-weight-bold.d-inline-block.profile__name Mr Buyer
                                             a.btn.text-center.bg-custom-gray.fz-14.float-right.d-inline-block.custom-btn.border-0.custom-modal__button(href='http://classictetriz.com/profile/manage-profile') Quản lý hồ sơ
@@ -72,19 +72,19 @@ html(lang="en")
                                                 .card-body
                                                     .content__list.content__list--bds
                                                         .content__item.content__item--bds.content__item--bds-mr.content__item--large
-                                                            .content__box.box.box--bds
+                                                            .content__box.box.box--bds.justify-content-around.box--large
                                                                 .box__top.box__top--bds
                                                                     .box__image
                                                                         img(src="./images/bds/bds-1.png", alt="")
-                                                                .box__row
-                                                                    .box__mid
+                                                                .box__mid2
+                                                                    .box__mid.border-0
                                                                         h2 Tên tài sản SDHFHFHHR
                                                                         p Nigel Gottlied 
                                                                     .box__item
-                                                                        .col.d-flex.aligin-items-center.justify-content-between
-                                                                            p.box__left end in:
+                                                                        .box__item--row.d-flex
+                                                                            p.box__left.box__black end in:
                                                                         
-                                                                            span.box__left.box__left--green
+                                                                            span.box__left.box__left--green.ml-5
                                                                                 | 11
                                                                                 span.text-lowercase.box__left--gray.font-weight-light d
                                                                                 | 2
@@ -94,116 +94,43 @@ html(lang="en")
                                                                                 | 10
                                                                                 span.text-lowercase.box__left--gray.font-weight-light s
                                                                         
-                                                                        .row
-                                                                            .col.d-flex.aligin-items-center.justify-content-between
-                                                                                p.box__left Bắt đầu tại:
+                                                                        .box__item--row.d-flex
+                                                                           
+                                                                                p.box__left.box__black Bắt đầu tại:
                                                                             
-                                                                                p.box__left.box__left--green 70 USD
-                                                                .box__bottom.box__bottom--bds
-                                                                    h3.box__title Tên tài sản
-                                                                    p.box__sub Giá khởi điểm:
-                                                                    p.box__price 24.000.000.000 VND
-                                                                    p.box__time Thời gian: 28/07/2020
-                                                                    button.btn.btn--dau-gia
-                                                                        img(src="./images/icon-dau-gia-big.png", alt="")
+                                                                                p.box__left.box__left--green.ml-5 70 USD
+                                                                .box__right
+                                                                    .box__row
+                                                                        p.box__black.box__mg Auction Type
+                                                                        p.box__left--green Highest Bid
+                                                                    .box__row
+                                                                        p.box__black.box__mg Starting Date
+                                                                        p.box__black 2020-07-16
+                                                                    .box__row
+                                                                        p.box__black.box__mg Ending Date
+                                                                        p.box__black 2020-08-16
+                                                                    .box__row
+                                                                        p.box__black.box__mg Status
+                                                                        p.box__left--green Running
                                                             .content__bg.content__bg--bds.content__bg--large
-                                                    .col-12
-                                                        .card.mt-4
-                                                            .row.no-gutters
-                                                                .col-xl-3.align-self-center
-                                                                    .card-view
-                                                                        a(href='http://classictetriz.com/auction/1')
-                                                                            img.img-fluid(src='http://classictetriz.com/storage/images/auction_image/34_images_4.png', alt='Card image cap')
-                                                                .col-xl-5
-                                                                    .card-body.py-5
-                                                                        a(href='http://classictetriz.com/auction/28')
-                                                                            h6.card-title.font-weight-bold.color-333 Error veritatis non quibusdam nulla vero.
-                                                                        .mb-2.fz-12
-                                                                            i.fa.fa-user-o.fz-12.mr-1(aria-hidden='true')
-                                                                            |  by
-                                                                            a.text-secondary(href='http://classictetriz.com/profile/1/seller') Nigel Gottlieb
-                                                                        p.card-text.fz-12.color-666.text-justify
-                                                                        p.mt-3.text-muted
-                                                                            | Initial Price : 
-                                                                            span.fz-16.ml-2.badge.badge-success.text-white.font-weight-bold  89 USD 
-                                                                        .mt-2
-                                                                            .count-down
-                                                                                .timer.d-inline-block
-                                                                                    div
-                                                                                        div
-                                                                                            span.badge.badge-danger Expired
-                                                                .col-lg-4.winner-parent
-                                                                    .py-5.px-3
-                                                                        ul.list-group.list-group-flush
-                                                                            li.list-group-item.color-999.fz-13.px-0.d-flex.justify-content-between.align-items-center
-                                                                                | Auction Type :
-                                                                                span.badge.font-weight-light.text-white.fz-12.bg-purple.text-white Highest Bid
-                                                                            li.list-group-item.color-999.fz-13.px-0.d-flex.justify-content-between.align-items-center
-                                                                                | Starting Date :
-                                                                                span.badge.color-333.border.font-weight-light.fz-12 2020-07-16
-                                                                            li.list-group-item.color-999.fz-13.px-0.d-flex.justify-content-between.align-items-center
-                                                                                | Ending Date :
-                                                                                span.badge.color-333.border.font-weight-light.fz-12 2020-08-16
-                                                                            li.list-group-item.color-999.fz-13.px-0.d-flex.justify-content-between.align-items-center
-                                                                                | Status :
-                                                                                span.badge.bg-success.text-white Running
-                                                    .col-12
-                                                        .card.mt-4
-                                                            .row.no-gutters
-                                                                .col-xl-3.align-self-center
-                                                                    .card-view
-                                                                        a(href='http://classictetriz.com/auction/2')
-                                                                            img.img-fluid(src='http://classictetriz.com/storage/images/auction_image/34_images_4.png', alt='Card image cap')
-                                                                .col-xl-5
-                                                                    .card-body.py-5
-                                                                        a(href='http://classictetriz.com/auction/28')
-                                                                            h6.card-title.font-weight-bold.color-333 Error veritatis non quibusdam nulla vero.
-                                                                        .mb-2.fz-12
-                                                                            i.fa.fa-user-o.fz-12.mr-1(aria-hidden='true')
-                                                                            |  by
-                                                                            a.text-secondary(href='http://classictetriz.com/profile/1/seller') Nigel Gottlieb
-                                                                        p.card-text.fz-12.color-666.text-justify
-                                                                        p.mt-3.text-muted
-                                                                            | Initial Price : 
-                                                                            span.fz-16.ml-2.badge.badge-success.text-white.font-weight-bold  89 USD 
-                                                                        .mt-2
-                                                                            .count-down
-                                                                                .timer.d-inline-block
-                                                                                    div
-                                                                                        div
-                                                                                            span.badge.badge-danger Expired
-                                                                .col-lg-4.winner-parent
-                                                                    .py-5.px-3
-                                                                        ul.list-group.list-group-flush
-                                                                            li.list-group-item.color-999.fz-13.px-0.d-flex.justify-content-between.align-items-center
-                                                                                | Auction Type :
-                                                                                span.badge.font-weight-light.text-white.fz-12.bg-purple.text-white Highest Bid
-                                                                            li.list-group-item.color-999.fz-13.px-0.d-flex.justify-content-between.align-items-center
-                                                                                | Starting Date :
-                                                                                span.badge.color-333.border.font-weight-light.fz-12 2020-07-16
-                                                                            li.list-group-item.color-999.fz-13.px-0.d-flex.justify-content-between.align-items-center
-                                                                                | Ending Date :
-                                                                                span.badge.color-333.border.font-weight-light.fz-12 2020-08-16
-                                                                            li.list-group-item.color-999.fz-13.px-0.d-flex.justify-content-between.align-items-center
-                                                                                | Status :
-                                                                                span.badge.bg-success.text-white Running
-                                                    #DataTables_Table_0_wrapper.dataTables_wrapper.dt-bootstrap4.no-footer
-                                                        .row
-                                                            .col-md-12
-                                                                .dt-buttons
-                                                        .row
-                                                            .col-md-6.col-sm-12
-                                                            .col-md-6.col-sm-12
-                                                        .table-scrollable
-                                                            table#DataTables_Table_0.table.cm-data-table.dataTable.no-footer.dtr-inline(role='grid')
-                                                                tbody
-                                                                    tr.odd
-                                                                        td.dataTables_empty(valign='top', colspan='0') No data available in table
-                                                                thead
-                                                                    tr(role='row')
-                                                        .row
-                                                            .col-md-5.col-sm-12
-                                                            .col-md-7.col-sm-12
+                                                    
+                                                    //- #DataTables_Table_0_wrapper.dataTables_wrapper.dt-bootstrap4.no-footer
+                                                    //-     .row
+                                                    //-         .col-md-12
+                                                    //-             .dt-buttons
+                                                    //-     .row
+                                                    //-         .col-md-6.col-sm-12
+                                                    //-         .col-md-6.col-sm-12
+                                                    //-     .table-scrollable
+                                                    //-         table#DataTables_Table_0.table.cm-data-table.dataTable.no-footer.dtr-inline(role='grid')
+                                                    //-             tbody
+                                                    //-                 tr.odd
+                                                    //-                     td.dataTables_empty(valign='top', colspan='0') No data available in table
+                                                    //-             thead
+                                                    //-                 tr(role='row')
+                                                    //-     .row
+                                                    //-         .col-md-5.col-sm-12
+                                                    //-         .col-md-7.col-sm-12
                                                 .card-footer.custom-card__footer
                                                     .row
                                                         .col-sm-6

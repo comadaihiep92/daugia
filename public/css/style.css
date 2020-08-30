@@ -28,6 +28,7 @@ body {
 }
 
 .containers {
+  max-width: 144rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -564,6 +565,9 @@ body {
 .content__item:hover .box__left--gray {
   color: rgba(255, 255, 255, 0.5) !important;
 }
+.content__item:hover .box__black {
+  color: var(--white);
+}
 .content__title {
   width: 100%;
   display: flex;
@@ -759,6 +763,25 @@ body {
 .box__price {
   color: var(--second) !important;
   opacity: 1 !important;
+}
+.box__mid2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.box__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box__row p {
+  font-size: 1.8rem;
+  line-height: 6rem;
+  color: var(--third);
+}
+.box__mg {
+  margin-right: 10rem;
 }
 
 .custom-card,
@@ -1102,7 +1125,7 @@ body {
 }
 .profile__image {
   height: 36.6rem;
-  width: 31rem;
+  width: 100%;
   background: url(../images/bg-avt.png) no-repeat center center;
 }
 .profile__body {
@@ -1714,6 +1737,21 @@ input[type=password]:focus:not([readonly]) + label {
   .content__item--bds {
     width: 100% !important;
   }
+
+  .content__item--large {
+    flex-direction: column;
+    height: 100% !important;
+    margin-right: 0 !important;
+  }
+
+  .box--large {
+    flex-direction: column;
+  }
+
+  .content__bg--large {
+    height: 85% !important;
+    width: 100%;
+  }
 }
 @media (max-width: 767.98px) {
   .content__list {
@@ -1865,5 +1903,9 @@ input[type=password]:focus:not([readonly]) + label {
   .custom-modal__button {
     font-size: 2.2rem;
     width: 20rem;
+  }
+
+  .content__bg--large {
+    height: 100% !important;
   }
 }
