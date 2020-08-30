@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+html(lang="en")
+    include head/head.pug
+        
+    body
+        include header/header.pug
+        main.main
+            .containers
+
+                .profile
+                    .profile__nav
+                        ul#myTab.nav.nav-tabs.mt-4.border-0(role='tablist')
+                            li.nav-item
+                                a.nav-link.px-5.py-2(href='/public/profile.html') Hồ sơ
+                            li.nav-item
+                                a.nav-link.px-5.py-2.active(href='/public/partner.html') Trở thành một người bán
+                    .row
+                        .col-12
+                            .card.profile__card.profile__card--partner
+                                .card-header
+                                    .row
+                                        .col-xl-4.align-self-center.profile__image.profile__image--small.d-flex.align-items-center.justify-content-center
+                                            //- img(src="./images/icon-shop.png", alt="")
+                                            .fileinput.fileinput-new.relative(data-provides='fileinput')
+                                                .fileinput.fileinput-new(data-provides='fileinput')
+                                                    .fileinput-new.img-thumbnail.mb-3.d-flex.border-0.align-items-center.profile__file
+                                                        img.img(src='./images/icon-shop.png', alt='')
+                                                    .fileinput-preview.fileinput-exists.mb-3.img-thumbnail(style='line-height: 10px;')
+                                                    div.profile__button
+                                                        span.btn.btn-sm.btn-outline-success.btn-file.profile__button--btn
+                                                            span.fileinput-new Select Image
+                                                            span.fileinput-exists Change
+                                                            input(type='hidden', value='', name='image')
+                                                            input(type='hidden', value='', name='')
+                                                            input#fake_427.multi-input(name='', type='file')
+                                                        a.btn.btn-sm.btn-outline-danger.fileinput-exists(href='#', data-dismiss='fileinput') Remove
+                                .card-body.profile__body
+                                    form.cvalidate(method='POST', action='http://classictetriz.com/stores', accept-charset='UTF-8', enctype='multipart/form-data')
+                                        input(name='_token', type='hidden', value='HyN2dpFzix8BHITKWN2MY6hSiN6OF7n59QhjkUCW')
+                                        input(type='hidden', name='_method', value='post')
+                                        input(type='hidden', value='shc', name='base_key')
+                                        .form-group.mb-0.row
+                                            .col-lg-6.profile__margin
+                                                .profile__row.d-flex.align-items-center
+                                                    label.mr-3.mb-0(for="fake_358") Name:
+                                                    input#fake_358.form-control(placeholder='', data-cval-name='Store name', data-cval-rules='required|min:3', name='fake_358', type='text')
+                                                span.invalid-feedback.cval-error(data-cval-error='fake_358')
+                                            .col-lg-6.profile__margin
+                                                .profile__row.d-flex.align-items-center
+                                                    label.mr-3.mb-0(for="fake_384") Phone:
+                                                    input#fake_384.form-control(placeholder='', data-cval-phone_number='Store phone_number required', data-cval-rules='required|min:3', name='fake_384', type='text')
+                                                span.invalid-feedback.cval-error(data-cval-error='fake_384')
+                                        .form-group.profile__margin
+                                            .profile__row.d-flex.align-items-center
+                                                label.mr-3.mb-0(for="fake_428") Email:
+                                                input#fake_428.form-control(placeholder='', data-cval-email='Store email required', data-cval-rules='required|min:3', name='fake_428', type='text')
+                                            span.invalid-feedback.cval-error(data-cval-error='fake_428')
+                                        .form-group.mb-4
+                                            textarea#fake_378.form-control.profile__area(rows='3', placeholder='Description about the Store', data-cval-description='Store description required', data-cval-rules='required|min:3', name='fake_378', cols='50')
+                                            span.invalid-feedback.cval-error(data-cval-error='fake_378')
+                                        .row
+                                            .col
+                                                p.profile__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        //- .row
+                                        //-     .col-md-4
+                                        //-         .fileinput.fileinput-new(data-provides='fileinput')
+                                        //-             .fileinput.fileinput-new(data-provides='fileinput')
+                                        //-                 .fileinput-new.img-thumbnail.mb-3
+                                        //-                     img.img(src='http://classictetriz.com/storage/images/seller_profile_images/preview.png', alt='')
+                                        //-                 .fileinput-preview.fileinput-exists.mb-3.img-thumbnail(style='line-height: 10px;')
+                                        //-                 div
+                                        //-                     span.btn.btn-sm.btn-outline-success.btn-file
+                                        //-                         span.fileinput-new Select
+                                        //-                         span.fileinput-exists Change
+                                        //-                         input(type='hidden', value='', name='image')
+                                        //-                         input(type='hidden', value='', name='')
+                                        //-                         input#fake_427.multi-input(name='', type='file')
+                                        //-                     a.btn.btn-sm.btn-outline-danger.fileinput-exists(href='#', data-dismiss='fileinput') Remove
+                                        //-     .col-md-8
+                                        //-         h4.font-weight-bold.border-bottom.color-666.pb-3 Store Image
+                                        //-         p.text-muted.mt-4
+                                        //-             | Upload a picture here which will be displayed in you store as your store profile image. Anyone will be able to see this image
+                                        //-         p.mt-3.mb-0.color-333
+                                        //-             | - Maximum Image Size : 
+                                        //-             span.font-weight-bold 5MB
+                                        //-         p.mt-1.color-333
+                                        //-             | - Maximum Image Dimension : 
+                                        //-             span.font-weight-bold 1600x1200
+                                        //-         span.invalid-feedback.cval-error(data-cval-error='fake_427')
+                                        .form-group.profile__box
+                                            button.btn.px-4.mt-2.float-right.profile__btn.profile__btn--active Submit
+                                            a.btn.d-inline-block.mt-2.mr-3.px-4.float-right.profile__btn(href='#') Hủy bỏ
+
+
+
+                                
+
+
+
+                
+                   
+        include footer/footer.pug
+
+
+
+    
+    //- script(src="./js/jquery-3.5.1.min.js")
+    //- script(src="./js/popper.min.js")
+    //- script(src="./js/bootstrap.min.js")
+    //- script(src="./js/owl.carousel.js")
+    //- script(src="./js/owl.carousel.min.js")
+    //- script(src="./js/moment.min.js")
+    //- script(src="./js/bootstrap-datetimepicker.min.js")
+    //- script(src="./js/datatables.min.js")
+    //- script(src="./js/dataTables.bootstrap4.min.js")
+    //- script(src="./js/table-datatables-responsive.min.js")
+
+    //- script(src="./js/custom.js")
+    include script/script.pug
+   

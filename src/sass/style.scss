@@ -1355,6 +1355,10 @@ body {
         border: none;
         background: #f3f3f3;
         border-radius: 5px;
+
+        &--partner {
+            padding: 5rem 4rem;
+        }
     }
 
     &__image {
@@ -1363,6 +1367,11 @@ body {
         // width: 31rem;
         width: 100%;
         background: url(../images/bg-avt.png) no-repeat center center;
+
+        &--small {
+            height: 22.5rem;
+            background: url(../images/bg-shop.png) no-repeat center center;
+        }
     }
 
     &__body {
@@ -1416,6 +1425,90 @@ body {
         margin-bottom: 2rem;
 
     }
+
+
+    &__file {
+        background: none !important;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 20px;
+        left: 24%;
+
+        &--btn {
+            border: none;
+            font-size: 2rem;
+            line-height: 2.3rem;
+            font-weight: 500;
+            color: var(--black);
+            opacity: 0.5;
+        }
+    }
+
+    &__row {
+        & label {
+            color: var(--third);
+            font-weight: 500;
+            font-size: 1.8rem;
+        }
+
+        & input {
+            height: 5.4rem;
+            font-size: 1.8rem;
+            background: #e9e9e9;
+            padding: 1rem 2rem;
+        }
+    }
+
+    &__area {
+        font-size: 1.8rem;
+        background: #e9e9e9;
+        padding: 1rem 2rem;
+        height: 16.1rem;
+        margin-bottom: 5rem;
+    }
+
+    &__margin {
+        margin-bottom: 3.5rem;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        color: var(--black);
+        opacity: 0.5;
+        margin-bottom: 5rem;
+    }
+
+    &__btn {
+        width: 20.4rem;
+        margin-left: 2rem;
+
+        height: 8rem;
+        font-size: 2.5rem;
+        line-height: 8rem;
+        padding: 0 !important;
+
+        text-transform: uppercase;
+        font-weight: bold;
+        opacity: 0.5;
+        color: var(--third);
+        background: url(../images/bg-btn.png) no-repeat center;
+
+
+        &--active {
+            background: url(../images/bg-btn2.png) no-repeat center;
+            opacity: 1;
+            color: var(--primary);
+        }
+
+    }
+
+    // &__box:hover button {
+    //     color: var(--second) !important;
+    //     opacity: 1;
+    // }
 
 }
 
@@ -2264,6 +2357,26 @@ input[type="password"]:focus:not([readonly])+label {
 
     .content__bg--large {
         height: 100% !important;
+    }
+
+    // profile
+    .profile__row {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .profile__btn {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile__box {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
