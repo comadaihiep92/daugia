@@ -1123,10 +1123,17 @@ body {
   background: #f3f3f3;
   border-radius: 5px;
 }
+.profile__card--partner {
+  padding: 5rem 4rem;
+}
 .profile__image {
   height: 36.6rem;
   width: 100%;
   background: url(../images/bg-avt.png) no-repeat center center;
+}
+.profile__image--small {
+  height: 22.5rem;
+  background: url(../images/bg-shop.png) no-repeat center center;
 }
 .profile__body {
   padding: 4.5rem 0;
@@ -1166,6 +1173,68 @@ body {
   color: var(--third);
   font-weight: 900;
   margin-bottom: 2rem;
+}
+.profile__file {
+  background: none !important;
+}
+.profile__button {
+  position: absolute;
+  bottom: 20px;
+  left: 24%;
+}
+.profile__button--btn {
+  border: none;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  font-weight: 500;
+  color: var(--black);
+  opacity: 0.5;
+}
+.profile__row label {
+  color: var(--third);
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.profile__row input {
+  height: 5.4rem;
+  font-size: 1.8rem;
+  background: #e9e9e9;
+  padding: 1rem 2rem;
+}
+.profile__area {
+  font-size: 1.8rem;
+  background: #e9e9e9;
+  padding: 1rem 2rem;
+  height: 16.1rem;
+  margin-bottom: 5rem;
+}
+.profile__margin {
+  margin-bottom: 3.5rem;
+}
+.profile__text {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: var(--black);
+  opacity: 0.5;
+  margin-bottom: 5rem;
+}
+.profile__btn {
+  width: 20.4rem;
+  margin-left: 2rem;
+  height: 8rem;
+  font-size: 2.5rem;
+  line-height: 8rem;
+  padding: 0 !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0.5;
+  color: var(--third);
+  background: url(../images/bg-btn.png) no-repeat center;
+}
+.profile__btn--active {
+  background: url(../images/bg-btn2.png) no-repeat center;
+  opacity: 1;
+  color: var(--primary);
 }
 
 footer {
@@ -1907,5 +1976,24 @@ input[type=password]:focus:not([readonly]) + label {
 
   .content__bg--large {
     height: 100% !important;
+  }
+
+  .profile__row {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .profile__btn {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile__box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 }
