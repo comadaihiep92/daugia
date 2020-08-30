@@ -2236,8 +2236,7 @@ input[type="password"]:focus:not([readonly])+label {
     &__line {
         font-size: 1.8rem;
         line-height: 2.1rem;
-        color: var(--third);
-        opacity: 0.5;
+        color: rgba(27, 31, 26, 0.5);
 
         img {
             width: 2rem;
