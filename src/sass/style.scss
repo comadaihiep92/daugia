@@ -1540,11 +1540,14 @@ body {
     }
 
     &__image {
-        background: url('../images/bg-qlhoso.png') no-repeat center;
+        background: url(../images/bg-qlhoso.png) no-repeat center;
         width: 16.8rem;
         height: 20rem;
         position: relative;
         margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         & a {
             position: absolute;
@@ -2585,6 +2588,12 @@ input[type="password"]:focus:not([readonly])+label {
         width: 100%;
         flex-direction: column;
         align-items: center;
+    }
+
+    .qlhoso__bottom table tr {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
